@@ -13,8 +13,10 @@ public class Matrix{
         double out = 0;
         for(int i =0; i< minimum; i++)
             output += a[i] * b[i];
+        
+        return 1;
     }
-    return 1;
+    
 
 }
 
