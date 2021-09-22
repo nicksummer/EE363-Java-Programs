@@ -1,11 +1,3 @@
-public double dot(double[]x, double[] y)(
-        int minimum = x.length > b.length ? b.length:a.length;
-        double out = 0;
-        for(int i =0; i< minimum; i++)
-            output += a[i] * b[i];
-)
-return output;
-
 public class Matrix{
     public static void main(String[] args)(
         Matrix matrix = new Matrix;
@@ -13,6 +5,15 @@ public class Matrix{
         double[] dot_y() = new double[] {1,2,3};
         double dot_Product - new matrix.dot(dot_x,dot,dot_y); 
         System.out.println("The dot product of matrix x and y is " + dot_Product);
+        
      )
+
+    public double dot(double[]x, double[] y)(
+        int minimum = x.length > b.length ? b.length:a.length;
+        double out = 0;
+        for(int i =0; i< minimum; i++)
+            output += a[i] * b[i];
+)
+return output;
 }
 
