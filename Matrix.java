@@ -9,10 +9,10 @@ public class Matrix{
     }
 
     public double dot_product(double[]x, double[] y){
-        int minimum = x.length > b.length ? b.length:a.length;
+        int minimum = x.length > y.length ? x.length:y.length;
         double out = 0;
         for(int i =0; i< minimum; i++)
-            output += a[i] * b[i];
+            out += a[i] * b[i];
 
         return 1;
     }
