@@ -13,7 +13,7 @@ public class Matrix{
             return transpose;
 
     }
-    public print(double[][]a){
+    public void print(double[][]a){
         for(int i = 0; i < x.length; i++)
             for(int j = 0; j < x[1].length; j++)
                 System.out.printf("%4f ",a[i][j]);
