@@ -35,6 +35,7 @@ public class Matrix{
         //transpose
         double[][] a = new double[][] {{1,2,3}, {4,5,6}};
         Matrix.print(a);
+        Matrix.print(Matrix.transpose(a));
         //dot product
        // double[] x = new double[] {1,1,1};
        // double[] y = new double[] {1,2,3};
