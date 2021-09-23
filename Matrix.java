@@ -4,7 +4,7 @@ public class Matrix{
 
     public static double[][] matrix_matrix(double[][]a, double[][]b){
             double[][] transpose_a = Matrix.transpose(a);
-            double[][] matrix_Mult = new double[transpose_a.length][transpose_a[1].length];
+            double[][][] matrix_Mult = new double[transpose_a.length][transpose_a[1].length];
 
             for(int i = 0; i < transpose_a.length; i++)
                 for(int j = 0; j < transpose_a[1].length; j++)
