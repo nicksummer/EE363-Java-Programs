@@ -9,6 +9,8 @@ public class Matrix{
                 for(int j = 0; j < x[0].length; i++)
                     System.out.println(i + " " + j);
 
+            return transpose;
+
     }
 
     public static double dot_product(double[] x, double[] y){
