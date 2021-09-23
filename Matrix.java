@@ -7,7 +7,7 @@ public class Matrix{
             
             for(int i = 0; i < x.length; i++)
                 for(int j = 0; j < x[0].length; i++)
-                    System.out.println(x + " " + y );
+                    System.out.println(i + " " + j);
 
     }
 
