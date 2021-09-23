@@ -2,6 +2,18 @@ public class Matrix{
 
     private Matrix() { }
 
+    public static double[] vector_matrix( double[]b, double[][]a){
+        double[] vexmat = new double[a[1].length];
+
+        double[][] trans = Matrix.transpose(a);
+
+        for(int i = 0; i < vexmat.length; i++)
+             vexmat[i] = Matrix.dot_product(b, trans[i]);
+
+        return vexmat;
+
+    }
+
     public static double[] matrix_vector(double[][]a, double[]b){
         double[] matvex = new double[a.length];
 
@@ -50,15 +62,26 @@ public class Matrix{
     }
 
     public static void main(String[] args){
+        //vector-matrix multiplication 
+        double[][] a = new double[][] {{1,2,3}, {4,5,6}};
+        double[]   x = new double[] {1,2,3};
+        Matrix.print_vector(x);
+        Matrix.print_matrix(a);
+        System.out.println();
+        System.out.println();
+        Matrix.print_vector(Matrix.vector_matrix(x, a));
 
+
+        /*
         // Matrix-Vector multiplication 
         double[][] a = new double[][] {{1,2,3}, {4,5,6}};
         double[]   x = new double[] {1,2,3};
         Matrix.print_vector(x);
         Matrix.print_matrix(a);
         System.out.println();
+        System.out.println();
         Matrix.print_vector(Matrix.matrix_vector(a, x));
-
+        */
 
 
 
