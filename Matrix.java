@@ -16,9 +16,9 @@ public class Matrix{
     public static void print(double[][]a){
         for(int i = 0; i < a.length; i++){
             System.out.println();
-        }
             for(int j = 0; j < a[1].length; j++)
                 System.out.printf("%4f ",a[i][j]);
+        }
     }
 
     public static double dot_product(double[] x, double[] y){
