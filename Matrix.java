@@ -53,9 +53,10 @@ public class Matrix{
 
         // Matrix-Vector multiplication 
         double[][] a = new double[][] {{1,2,3}, {4,5,6}};
-        double[]   x = new double[] {1,1,1};
+        double[]   x = new double[] {1,2,3};
         Matrix.print_vector(x);
         Matrix.print_matrix(a);
+        System.out.println();
         Matrix.print_vector(Matrix.matrix_vector(a, x));
 
 
