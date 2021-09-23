@@ -3,7 +3,7 @@ public class Matrix{
     private Matrix() { }
 
     public static double[][] transpose(double[][]x ){
-        double[][] transpose = new double[][];
+        double[][] transpose = new double[x[1].length][x.length];
             
             for(int i = 0; i < x.length; i++)
                 for(int j = 0; j < x[1].length; j++)
