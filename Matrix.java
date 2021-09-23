@@ -14,8 +14,8 @@ public class Matrix{
 
     }
     public void print(double[][]a){
-        for(int i = 0; i < x.length; i++)
-            for(int j = 0; j < x[1].length; j++)
+        for(int i = 0; i < a.length; i++)
+            for(int j = 0; j < a[1].length; j++)
                 System.out.printf("%4f ",a[i][j]);
     }
 
