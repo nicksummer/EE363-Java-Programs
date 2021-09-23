@@ -2,7 +2,7 @@ public class Matrix{
 
     private Matrix() { }
 
-    public double dot_product(double[] x, double[] y){
+    public static double dot_product(double[] x, double[] y){
         int minimum = x.length > y.length ? x.length:y.length;
         double outp = 0;
         for(int i =0; i< minimum; i++)
