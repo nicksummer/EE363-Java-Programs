@@ -7,10 +7,16 @@ public class Matrix{
             
             for(int i = 0; i < x.length; i++)
                 for(int j = 0; j < x[1].length; j++)
-                    System.out.println(x[i][j]);
+                    transpose[i][j] = x[i][j];
+                    //System.out.println(x[i][j]);
 
             return transpose;
 
+    }
+    public print(double[][]a){
+        for(int i = 0; i < x.length; i++)
+            for(int j = 0; j < x[1].length; j++)
+                System.out.printf("%4f ",a[i][j]);
     }
 
     public static double dot_product(double[] x, double[] y){
@@ -26,7 +32,7 @@ public class Matrix{
     public static void main(String[] args){
         //transpose
         double[][] a = new double[][] {{1,2,3}, {4,5,6}};
-        transpose(a);
+        Matrix.print(a);
         //dot product
        // double[] x = new double[] {1,1,1};
        // double[] y = new double[] {1,2,3};
