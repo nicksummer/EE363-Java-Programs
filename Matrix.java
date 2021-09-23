@@ -7,7 +7,9 @@ public class Matrix{
 
             for(int i = 0; i < a.lenght; i++)
                 for(int j = 0; j < a[1].length; j++)
-                    matrix_Mult[i] = Matrix.dot_product(transpose_a, b);
+                    matrix_Mult[i] = Matrix.dot_product(transpose_a[i][j], b[i][j]);
+
+            return matrix_Mult;
 
     }
 
