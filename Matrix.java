@@ -27,7 +27,7 @@ public class Matrix{
             for(int j = 0; j < a.length; j++)
                 System.out.printf("%4f ", a.length);
         }
-        System.out.println();
+        System.out.println("");
     }
     public static void print_matrix(double[][]a){
         for(int i = 0; i < a.length; i++){
@@ -55,7 +55,7 @@ public class Matrix{
         Matrix.print_vector(x);
         Matrix.print_matrix(a);
 
-        
+
 
 
         /*
