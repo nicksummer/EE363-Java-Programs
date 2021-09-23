@@ -7,7 +7,7 @@ public class Matrix{
             
             for(int i = 0; i < x.length; i++)
                 for(int j = 0; j < x[1].length; j++)
-                    System.out.println(i + " " + j);
+                    System.out.println(x[i][j]);
 
             return transpose;
 
