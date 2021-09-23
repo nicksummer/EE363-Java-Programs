@@ -17,7 +17,7 @@ public class Matrix{
         //Matrix matrix = new matrix();
         double[] x = new double[] {1,1,1};
         double[] y = new double[] {1,2,3};
-        double dot_Product = new dot_product(x, y); 
+        double dot_Product = Matrix.dot_product(x, y); 
         System.out.println("The dot product of matrix x and y is " + dot_Product);
         
     }
