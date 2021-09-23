@@ -79,6 +79,7 @@ public class Matrix{
         double[][]   b = new double[][] {{7,8,9}, {10,11,12}};
         Matrix.print_matrix(a);
         Matrix.print_matrix(b);
+        Matrix.print_matrix(Matrix.transpose(a));
         System.out.println();
         System.out.println();
         Matrix.print_matrix(Matrix.matrix_matrix(a,b));
