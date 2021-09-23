@@ -2,7 +2,7 @@ public class Matrix{
 
     private Matrix() { }
 
-    public static double transpose(double[][]x ){
+    public static double[][] transpose(double[][]x ){
         double[][] transpose = new double[][] { };
             
             for(int i = 0; i < x.length; i++)
