@@ -56,6 +56,7 @@ public class Matrix{
         double[]   x = new double[] {1,1,1};
         Matrix.print_vector(x);
         Matrix.print_matrix(a);
+        Matrix.print_vector(Matrix.matrix_vector(a, x));
 
 
 
