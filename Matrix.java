@@ -5,8 +5,8 @@ public class Matrix{
     public static double transpose(double[][]x ){
         double[][] transpose = new double[][] { };
             
-            for(i = 0; i < x.length; i++)
-                for(j = 0; j < x[0].length; i++)
+            for(int i = 0; i < x.length; i++)
+                for(int j = 0; j < x[0].length; i++)
                     System.out.println(x + " " + y );
 
     }
