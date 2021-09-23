@@ -26,9 +26,11 @@ public class Matrix{
     public static void print_vector(double[]a){
             for(int j = 0; j < a.length; j++)
                 System.out.printf("%4f ", a.length);
+        
+            System.out.println("");
         }
-        System.out.println("");
-    }
+        
+    
     public static void print_matrix(double[][]a){
         for(int i = 0; i < a.length; i++){
             System.out.println();
