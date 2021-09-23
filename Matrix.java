@@ -5,7 +5,7 @@ public class Matrix{
     public static double[][] matrix_matrix(double[][]a, double[][]b){
             double[][] transpose_a = Matrix.transpose(a);
 
-            for(int i = 0; i < transpose_a.lengh; i++)
+            for(int i = 0; i < transpose_a.length; i++)
                 for(int j = 0; j < transpose_a[1].length; j++)
                     matrix_Mult[i] = Matrix.dot_product(transpose_a[i][j], b[i][j]);
 
