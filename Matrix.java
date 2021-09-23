@@ -8,7 +8,7 @@ public class Matrix{
 
             for(int i = 0; i < transpose_a.length; i++)
                 for(int j = 0; j < transpose_a[1].length; j++)
-                    matrix_Mult[i][j] = Matrix.dot_product(transpose_a, b);
+                    matrix_Mult[i][j] = Matrix.dot_product(transpose_a[i], b);
 
             return matrix_Mult;
 
