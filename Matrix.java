@@ -3,7 +3,8 @@ public class Matrix{
     private Matrix() { }
 
     public static double dot_product(double[] x, double[] y){
-        int minimum = x.length > y.length ? x.length:y.length;
+        int minimum = x.length < y.length ? x.length:y.length;
+
         double outp = 0;
         for(int i =0; i< minimum; i++)
             outp += x[i] * y[i];
