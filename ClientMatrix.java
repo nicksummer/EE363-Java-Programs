@@ -1,4 +1,4 @@
-public static void main(String[] args){
+public static Matrix main(String[] args){
     //matrix-matrix multiplication 
     double[][]   a = new double[][] {{1,2,3}, {2,3,4}};
     double[][]   b = new double[][] {{1,2}, {3,4}, {5, 6}};
