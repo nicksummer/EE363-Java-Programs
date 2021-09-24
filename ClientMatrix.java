@@ -32,10 +32,10 @@
 
             System.out.println("The result of a vector \n");
             Matrix.print_vector(VecMat_x);
-            System.out.println("and a matrix \n");
+            System.out.println("\n and a matrix \n");
             Matrix.print_matrix(VecMat_a);
             System.out.println("is \n");
-            
+
             Matrix.print_vector(Matrix.vector_matrix(VecMat_x, VecMat_a));
             System.out.println("------------------------------------------------------------");
 
