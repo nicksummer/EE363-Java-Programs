@@ -44,7 +44,7 @@
             System.out.println();
             System.out.println();
 
-            System.out.println("The result of a matrix being multiplied by a vector is  "); 
+            System.out.println("The result of a matrix being multiplied by a vector is  \n"); 
             Matrix.print_vector(Matrix.matrix_vector(MatVec_a, MatVec_x));
             System.out.println("------------------------------------------------------------");
 
