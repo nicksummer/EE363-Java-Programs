@@ -3,12 +3,12 @@ public class Matrix{
     private Matrix() { }
 
     public static double[][] matrix_matrix(double[][]a, double[][]b){
+            double[][] matrix_Mult = new double[a.length][b[1].length];
             double[][] transpose_b = Matrix.transpose(b);
-            double[][] matrix_Mult = new double[a.length][transpose_b.length];
 
-            for(int i = 0; i < transpose_b.length; i++)
-                for(int j = 0; j < transpose_b[1].length; j++)
-                    matrix_Mult[i][j] = Matrix.dot_product(a[i], transpose_b[i]);
+            for(int rows = 0; rows < a.length; rows++)
+                for(int col = 0; col < b[1].length; col++)
+                    matrix_Mult[row][col] = Matrix.dot_product(a[row], transpose_b[row]);
 
             return matrix_Mult;
 
