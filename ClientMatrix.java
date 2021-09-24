@@ -44,7 +44,7 @@
             System.out.println();
 
             System.out.println("The result of a matrix \n");
-            Matrix.print_matrix(MatVec_x); 
+            Matrix.print_matrix(MatVec_a); 
             System.out.println("\nand a vector \n");
             Matrix.print_vector(MatVec_x);
             System.out.println("\nis \n");
