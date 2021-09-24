@@ -37,7 +37,7 @@ class ClientMatrix{
         Matrix.print_matrix(trans_a);
         double[][] t = Matrix.transpose(trans_a);
         System.out.println("The transpose of the matrix " + trans_a + ". ");
-        Matrix.print(t);
+        Matrix.print_matrix(t);
     
         //dot product
         double[] dot_x = new double[] {1,1,1};
