@@ -34,7 +34,7 @@
             Matrix.print_vector(VecMat_x);
             System.out.println("\n and a matrix \n");
             Matrix.print_matrix(VecMat_a);
-            System.out.println("is \n");
+            System.out.println("\n is \n");
 
             Matrix.print_vector(Matrix.vector_matrix(VecMat_x, VecMat_a));
             System.out.println("------------------------------------------------------------");
