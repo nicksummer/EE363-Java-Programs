@@ -34,7 +34,7 @@ class ClientMatrix{
         
         //transpose
         double[][] trans_a = new double[][] {{1,2,3}, {4,5,6}};
-        Matrix.print(trans_a);
+        Matrix.print_matrix(trans_a);
         double[][] t = Matrix.transpose(trans_a);
         System.out.println("The transpose of the matrix " + trans_a + ". ");
         Matrix.print(t);
