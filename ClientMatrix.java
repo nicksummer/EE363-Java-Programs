@@ -38,8 +38,8 @@
             double[][]  MatVec_a = new double[][] {{1,2,3}, {4,5,6}};
             double[]    MatVec_x = new double[] {1,2,3};
 
-            Matrix.print_vector(MatVec_x);
-            Matrix.print_matrix(MatVec_a);
+           // Matrix.print_vector(MatVec_x);
+           // Matrix.print_matrix(MatVec_a);
 
             System.out.println();
             System.out.println();
@@ -54,7 +54,7 @@
             //transpose
             double[][] trans_a = new double[][] {{1,2,3}, {4,5,6}};
             double[][] t = Matrix.transpose(trans_a);
-            System.out.println("The transpose of the matrix " + trans_a + ". ");
+            System.out.println("The transpose of a matrix   "); Matrix.print_matrix(trans_a)
             Matrix.print_matrix(t);
 
             System.out.println();
