@@ -7,30 +7,42 @@ class ClientMatrix{
         //matrix-matrix multiplication 
         double[][]   matrixMat_a = new double[][] {{1,2,3}, {2,3,4}};
         double[][]   matrixMat_b = new double[][] {{1,2}, {3,4}, {5, 6}};
+        
         Matrix.print_matrix(matrixMat_a);
         System.out.println("----------------");
         Matrix.print_matrix(matrixMat_b);
+
         System.out.println();
         System.out.println();
+
         Matrix.print_matrix(Matrix.matrix_matrix(matrixMat_a, matrixMat_b));
 
         //vector-matrix multiplication 
         double[][] VecMat_a = new double[][] {{1,2,3}, {4,5,6}};
         double[]   VecMat_x = new double[] {1,2,3};
+
         Matrix.print_vector(VecMat_x);
         Matrix.print_matrix(VecMat_a);
+        
         System.out.println();
         System.out.println();
+
         Matrix.print_vector(Matrix.vector_matrix(VecMat_x, VecMat_a));
     
         // Matrix-Vector multiplication 
         double[][]  MatVec_a = new double[][] {{1,2,3}, {4,5,6}};
         double[]    MatVec_x = new double[] {1,2,3};
+
         Matrix.print_vector(MatVec_x);
         Matrix.print_matrix(MatVec_a);
+
         System.out.println();
         System.out.println();
+
         Matrix.print_vector(Matrix.matrix_vector(MatVec_a, MatVec_x));
+
+        System.out.println();
+        System.out.println();
         
         //transpose
         double[][] trans_a = new double[][] {{1,2,3}, {4,5,6}};
