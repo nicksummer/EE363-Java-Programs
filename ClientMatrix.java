@@ -12,9 +12,9 @@
 
             System.out.println("The result of the matrix \n");
             Matrix.print_matrix(matrixMat_a);
-            System.out.println("\n being multiplied by a nother matrix \n");
+            System.out.println("\n\nbeing multiplied by a nother matrix \n");
             Matrix.print_matrix(matrixMat_b);
-            System.out.println("\n results in \n");
+            System.out.println("\n\nresults in \n");
 
             Matrix.print_matrix(Matrix.matrix_matrix(matrixMat_a, matrixMat_b));
 
