@@ -16,7 +16,7 @@ class ClientMatrix{
         Matrix.print_matrix(Matrix.matrix_matrix(matrixMat_a, matrixMat_b));
 
         System.out.println();
-        System.out.println();
+        System.out.println("------------------------------");
        
         //vector-matrix multiplication 
         double[][] VecMat_a = new double[][] {{1,2,3}, {4,5,6}};
