@@ -1,5 +1,5 @@
 import Matrix.java;
-public class Matrix{
+class ClientMatrix{
 public static void main(String[] args){
     //matrix-matrix multiplication 
     double[][]   a = new double[][] {{1,2,3}, {2,3,4}};
@@ -48,6 +48,5 @@ public static void main(String[] args){
    // double[] y = new double[] {1,2,3};
    // double dot_Product = Matrix.dot_product(x, y); 
    // System.out.println("The dot product of matrix x and y is " + dot_Product);
-    
     }
 }
