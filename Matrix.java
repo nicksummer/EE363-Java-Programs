@@ -80,6 +80,7 @@ public class Matrix{
         Matrix.print_matrix(Matrix.transpose(a));
         Matrix.print_matrix(b);
         System.out.println();
+        System.out.println("----------------");
         System.out.println();
         Matrix.print_matrix(Matrix.matrix_matrix(a,b));
 
