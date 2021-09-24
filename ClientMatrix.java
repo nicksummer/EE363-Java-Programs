@@ -13,7 +13,11 @@
             // Matrix.print_matrix(matrixMat_a);
             // System.out.println("----------------");
             // Matrix.print_matrix(matrixMat_b);
-            System.out.println("The result of the matrix a being multiplied by matrix b is ");
+            System.out.println("The result of the matrix \n");
+            Matrix.print_matrix(matrixMat_a);
+            System.out.println("\n being multiplied by a nother matrix \n");
+            Matrix.print_matrix(matrixMat_b);
+            System.out.println("\n results in \n");
 
             Matrix.print_matrix(Matrix.matrix_matrix(matrixMat_a, matrixMat_b));
 
@@ -31,7 +35,7 @@
             Matrix.print_vector(VecMat_x);
             System.out.println("\nand a matrix \n");
             Matrix.print_matrix(VecMat_a);
-            System.out.println("\n\nis \n");
+            System.out.println("\n\nbeing multiplied together is \n");
 
             Matrix.print_vector(Matrix.vector_matrix(VecMat_x, VecMat_a));
             System.out.println("------------------------------------------------------------");
@@ -68,7 +72,8 @@
             //dot product
             double[] dot_x = new double[] {1,1,1};
             double[] dot_y = new double[] {1,2,3};
-            double dot_Product = Matrix.dot_product(dot_x, dot_y); 
+            //double dot_Product = Matrix.dot_product(dot_x, dot_y); 
+            Matrix.print_vector(Matrix.dot_product(dot_x, dot_y));
             System.out.println("The dot product of matrix x and y is " + dot_Product);
         }
     }
