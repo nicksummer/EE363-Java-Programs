@@ -1,5 +1,3 @@
-import class.package.Matrix;
-
 class ClientMatrix{
 
     public static void main(String[] args){
