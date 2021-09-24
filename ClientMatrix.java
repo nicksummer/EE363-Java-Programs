@@ -56,8 +56,8 @@
             double[][] t = Matrix.transpose(trans_a);
             System.out.println("The transpose of a matrix   "); 
             Matrix.print_matrix(trans_a);
-            System.out.println();
-            System.out.println("is ");
+            System.out.println("\n");
+            System.out.println("is equal to ");
             Matrix.print_matrix(t);
 
             System.out.println();
