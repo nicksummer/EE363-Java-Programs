@@ -60,11 +60,14 @@
             //transpose
             double[][] trans_a = new double[][] {{1,2,3}, {4,5,6}};
             double[][] t = Matrix.transpose(trans_a);
+
             System.out.println("The transpose of a matrix   "); 
             Matrix.print_matrix(trans_a);
             System.out.println("\n");
             System.out.println("is equal to ");
             Matrix.print_matrix(t);
+
+            System.out.println("------------------------------------------------------------");
 
             System.out.println();
             System.out.println();
@@ -79,5 +82,6 @@
             System.out.println("\nand a vector \n");
             Matrix.print_vector(dot_y);
             System.out.println("\nis " + dot_Product);
+            System.out.println("------------------------------------------------------------");
         }
     }
