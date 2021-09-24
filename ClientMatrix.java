@@ -68,9 +68,6 @@
             Matrix.print_matrix(t);
 
             System.out.println("\n\n------------------------------------------------------------");
-
-            System.out.println();
-            System.out.println();
         
             //dot product
             double[] dot_x = new double[] {1,1,1};
