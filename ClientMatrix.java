@@ -1,4 +1,4 @@
-import package.Matrix;
+import class.package.Matrix;
 
 class ClientMatrix{
 
