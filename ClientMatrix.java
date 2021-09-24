@@ -72,8 +72,12 @@
             //dot product
             double[] dot_x = new double[] {1,1,1};
             double[] dot_y = new double[] {1,2,3};
-            //double dot_Product = Matrix.dot_product(dot_x, dot_y); 
-            Matrix.print_vector(Matrix.dot_product(dot_x, dot_y));
-            System.out.println("The dot product of matrix x and y is " + dot_Product);
+            double dot_Product = Matrix.dot_product(dot_x, dot_y); 
+
+            System.out.println("The dot product of vector \n");
+            Matrix.print_vector(dot_x);
+            System.out.println("\nand a vector \n");
+            Matrix.print_vector(dot_y);
+            System.out.println("\nis " + dot_Product);
         }
     }
