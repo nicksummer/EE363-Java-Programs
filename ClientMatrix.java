@@ -13,7 +13,7 @@ class ClientMatrix{
        // Matrix.print_matrix(matrixMat_b);
 
        matrixxmatrix = Matrix.print_matrix(Matrix.matrix_matrix(matrixMat_a, matrixMat_b));
-       System.out.println("The result of the matrix a being multiplied by matrix b is " + matrixxmatrix". ");
+       System.out.println("The result of the matrix a being multiplied by matrix b is " + matrixxmatrix + ". ");
 
         //vector-matrix multiplication 
         double[][] VecMat_a = new double[][] {{1,2,3}, {4,5,6}};
