@@ -9,7 +9,7 @@
             System.out.println("------------------------------------------------------------");
             double[][]   matrixMat_a = new double[][] {{1,2,3}, {2,3,4}};
             double[][]   matrixMat_b = new double[][] {{1,2}, {3,4}, {5, 6}};
-            
+
             System.out.println("The result of the matrix \n");
             Matrix.print_matrix(matrixMat_a);
             System.out.println("\n being multiplied by a nother matrix \n");
@@ -43,7 +43,11 @@
 
             System.out.println();
 
-            System.out.println("The result of a matrix being multiplied by a vector is  \n"); 
+            System.out.println("The result of a matrix \n");
+            Matrix.print_matrix(MatVec_x); 
+            System.out.println("\nand a vector \n");
+            Matrix.print_vector(MatVec_x);
+            System.out.println("\nis \n");
             Matrix.print_vector(Matrix.matrix_vector(MatVec_a, MatVec_x));
             System.out.println("------------------------------------------------------------");
             
