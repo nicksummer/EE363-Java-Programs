@@ -23,10 +23,7 @@
             //vector-matrix multiplication 
             double[][] VecMat_a = new double[][] {{1,2,3}, {4,5,6}};
             double[]   VecMat_x = new double[] {1,2,3};
-
-            Matrix.print_vector(VecMat_x);
-            
-            
+                         
             System.out.println();
             System.out.println();
 
