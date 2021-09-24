@@ -25,12 +25,17 @@
             double[]   VecMat_x = new double[] {1,2,3};
 
             Matrix.print_vector(VecMat_x);
-            Matrix.print_matrix(VecMat_a);
+            
             
             System.out.println();
             System.out.println();
 
-            System.out.println("The result of a vector being multiplied by a Matrix is  ");
+            System.out.println("The result of a vector \n");
+            Matrix.print_vector(VecMat_x);
+            System.out.println("and a matrix \n");
+            Matrix.print_matrix(VecMat_a);
+            System.out.println("is \n");
+            
             Matrix.print_vector(Matrix.vector_matrix(VecMat_x, VecMat_a));
             System.out.println("------------------------------------------------------------");
 
