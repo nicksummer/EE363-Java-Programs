@@ -1,3 +1,5 @@
+import package.Matrix;
+
 public static Matrix main(String[] args){
     //matrix-matrix multiplication 
     double[][]   a = new double[][] {{1,2,3}, {2,3,4}};
