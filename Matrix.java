@@ -72,7 +72,7 @@ public class Matrix{
 
         return outp;
     }
-
+/*
     public static void main(String[] args){
         //matrix-matrix multiplication 
         double[][]   a = new double[][] {{1,2,3}, {2,3,4}};
@@ -115,7 +115,7 @@ public class Matrix{
         Matrix.print(a);
         double[][] t = Matrix.transpose(a);
         Matrix.print(t);
-        */
+       
         //dot product
        // double[] x = new double[] {1,1,1};
        // double[] y = new double[] {1,2,3};
@@ -123,7 +123,7 @@ public class Matrix{
        // System.out.println("The dot product of matrix x and y is " + dot_Product);
         
     }
-
+        */
     
 }
 
