@@ -77,7 +77,7 @@ public class Matrix{
         //matrix-matrix multiplication 
         double[][]   a = new double[][] {{1,2,3}, {4,5,6}};
         double[][]   b = new double[][] {{7,8}, {9,10}, {11, 12}};
-        Matrix.print_matrix(Matrix.transpose(a));
+        Matrix.print_matrix(a);
         System.out.println("----------------");
         Matrix.print_matrix(b);
         System.out.println();
