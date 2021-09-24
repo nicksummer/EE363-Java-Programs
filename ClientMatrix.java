@@ -1,4 +1,4 @@
-import package.Matrix;
+import Matrix.java;
 
 public static Matrix main(String[] args){
     //matrix-matrix multiplication 
