@@ -67,7 +67,7 @@
             System.out.println("is equal to ");
             Matrix.print_matrix(t);
 
-            System.out.println("\n------------------------------------------------------------");
+            System.out.println("\n\n------------------------------------------------------------");
 
             System.out.println();
             System.out.println();
