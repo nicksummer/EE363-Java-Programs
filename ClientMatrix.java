@@ -5,6 +5,8 @@ class ClientMatrix{
 
     public static void main(String[] args){
         //matrix-matrix multiplication 
+
+        System.out.println("------------------------------");
         double[][]   matrixMat_a = new double[][] {{1,2,3}, {2,3,4}};
         double[][]   matrixMat_b = new double[][] {{1,2}, {3,4}, {5, 6}};
 
