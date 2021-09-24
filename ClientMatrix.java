@@ -12,7 +12,7 @@ class ClientMatrix{
        // System.out.println("----------------");
        // Matrix.print_matrix(matrixMat_b);
 
-       matrixxmatrix = Matrix.print_matrix(Matrix.matrix_matrix(matrixMat_a, matrixMat_b));
+      double matrixxmatrix = Matrix.print_matrix(Matrix.matrix_matrix(matrixMat_a, matrixMat_b));
        System.out.println("The result of the matrix a being multiplied by matrix b is " + matrixxmatrix + ". ");
 
         //vector-matrix multiplication 
