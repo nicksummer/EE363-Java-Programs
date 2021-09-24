@@ -27,9 +27,6 @@
             //vector-matrix multiplication 
             double[][] VecMat_a = new double[][] {{1,2,3}, {4,5,6}};
             double[]   VecMat_x = new double[] {1,2,3};
-                         
-            System.out.println();
-            System.out.println();
 
             System.out.println("The result of a vector \n");
             Matrix.print_vector(VecMat_x);
@@ -48,13 +45,11 @@
            // Matrix.print_matrix(MatVec_a);
 
             System.out.println();
-            System.out.println();
 
             System.out.println("The result of a matrix being multiplied by a vector is  \n"); 
             Matrix.print_vector(Matrix.matrix_vector(MatVec_a, MatVec_x));
             System.out.println("------------------------------------------------------------");
 
-            System.out.println();
             System.out.println();
             
             //transpose
