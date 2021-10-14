@@ -1,6 +1,6 @@
 public class Rational{
-    private final numerator;
-    private final denominator;
+    private final int numerator;
+    private final int denominator;
 
     public Rational(int numerator, int denominator){
         this(5,4);
