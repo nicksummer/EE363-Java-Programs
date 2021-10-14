@@ -1,7 +1,7 @@
 public class Rational{
     private final numerator;
     private final denominator;
-    public static Rational Rational(int numerator, int denominator){
+    public Rational(int numerator, int denominator){
 
         int gcd = gcd(numerator, denominator)
         
