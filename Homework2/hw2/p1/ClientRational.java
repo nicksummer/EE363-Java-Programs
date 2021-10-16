@@ -6,7 +6,7 @@ class ClientRational {
 
 public static void main(String[] args){
 
-	StdOut.println("hello world")
+	StdOut.println("hello world");
 
 		// Rational test = new Rational(5,4);
 		// StdOut.println("r1: " + test);
