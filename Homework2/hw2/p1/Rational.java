@@ -10,12 +10,12 @@ public class Rational{
         
         if(denominator == 0)
             if (numerator <= 0){
-                this.Numerator = -numerator/Gcd;
-                this.Denominator = -denominator/Gcd;
+                this.numerator = -Numerator/Gcd;
+                this.denominator = -Denominator/Gcd;
             }
             else {
-                this.Numerator = numerator/Gcd;
-                this.Denominator = denominator/Gcd;
+                this.numerator = Numerator/Gcd;
+                this.denominator = Denominator/Gcd;
             }
     }
 
