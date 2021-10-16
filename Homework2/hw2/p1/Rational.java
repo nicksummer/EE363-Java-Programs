@@ -60,11 +60,8 @@ public class Rational{
             throw new AssertionError("overflow detected");
         }
 
-        Rational addition = new Rational((int)bigNumer), (int)bigDenom);
-        
-        
-
-        return addition;
+        return new Rational((int)bigNumer, (int)bigDenom);
+    
     }
     public Rational(int numerator, int denominator){
         if(denominator == 0){
