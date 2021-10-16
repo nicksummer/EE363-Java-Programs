@@ -117,21 +117,21 @@ public class Rational{
 		StdOut.println("cr1: " + cr1);
 		
 
-		//Rational n5 = new Rational(7, 8);
-		//StdOut.println("[Rational n5 = new Rational(7, 8);]");
-		//StdOut.println("r1: " + r1);
-		//StdOut.println("n5: " + n5);		
-		//StdOut.println("r1 equals cr1: " + r1.equals(cr1));
-		//StdOut.println("r1 equals n5: " + r1.equals(n5));
-		//System.out.println();
+		Rational n5 = new Rational(7, 8);
+		StdOut.println("[Rational n5 = new Rational(7, 8);]");
+		StdOut.println("r1: " + r1);
+		StdOut.println("n5: " + n5);		
+		StdOut.println("r1 equals cr1: " + r1.equals(cr1));
+		StdOut.println("r1 equals n5: " + r1.equals(n5));
+		System.out.println();
 
-		//another equals test (test contents, not just references)		
-		//Rational cr2 = new Rational(5, 6);
-		//StdOut.println("[Rational cr2 = new Rational(5, 6);]");
-		//StdOut.println("r1: " + r1);
-		//StdOut.println("cr2: " + cr2);		
-		//StdOut.println("r1 equals cr2: " + r1.equals(cr2));
-		//System.out.println();
+		another equals test (test contents, not just references)		
+		Rational cr2 = new Rational(5, 6);
+		StdOut.println("[Rational cr2 = new Rational(5, 6);]");
+		StdOut.println("r1: " + r1);
+		StdOut.println("cr2: " + cr2);		
+		StdOut.println("r1 equals cr2: " + r1.equals(cr2));
+		System.out.println();
 				
 
 
