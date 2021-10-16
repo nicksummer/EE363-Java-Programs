@@ -2,6 +2,8 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class Rational{
     
+    private Rational() { }
+
     private long num;
     private long denom;
 
@@ -48,7 +50,7 @@ public class Rational{
        
 		Rational r1 = new Rational(5, 6);
 		Rational r2 = new Rational(3, 4);
-        long gcd = new gcd(r1);
+        long gcd = new Rational.gcd(r1);
         StdOut.println(gcd);
 		StdOut.println("r1: " + r1);
 		StdOut.println("r2: " + r2);
