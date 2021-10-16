@@ -5,7 +5,16 @@ public class Rational{
     private long num;
     private long denom;
 
-   
+    public Rational plus(Rational that){
+        long gcd1 = gcd(this.num, that.denom);
+        long gcd2 = gcd(this.denom, that.num);
+
+        Rational addition = new Rational((this.num / gcd1) * (that.num / gcd2) + (that.num / gcd1) * (this.denom / gcd2), this.denom * (that.denom / gcd2));
+
+        addition.num *= gcd1;
+        return addition;
+    }
+
     public Rational(long numerator, long denominator){
 
         long Gcd = gcd(numerator, denominator);
@@ -24,8 +33,8 @@ public class Rational{
 
     public static long gcd(long a, long b){
         if (b == 0) return a;
-        long r = a % b;
-        return gcd(a, r);
+        long mod_ab = a % b;
+        return gcd(a, mod_ab);
     }
 
     public String toString(){
@@ -44,8 +53,8 @@ public class Rational{
 		StdOut.println("r1: " + r1);
 		StdOut.println("r2: " + r2);
 
-		//Rational rsum = r1.plus(r2);
-		//StdOut.println("r1 + r2: " + rsum);
+		Rational rsum = r1.plus(r2);
+		StdOut.println("r1 + r2: " + rsum);
 		
 		//Rational rdiff = r1.minus(r2);
 		//StdOut.println("r1 - r2: " + rdiff);
