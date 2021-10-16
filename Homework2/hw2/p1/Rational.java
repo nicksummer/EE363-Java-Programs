@@ -24,9 +24,11 @@ public class Rational{
     }
 
     public Rational times(Rational that){
-        int newNum = (this.num * that.num);
-        int newDenom = (this.denom * that.denom);
-
+        long newNum = ((long)this.num * (long)that.num);
+        long newDenom = (this.denom * that.denom);
+        if (newNum > Integer.MAX_VALUE || newNum < Integer.MIN_VALUE){
+            throw new AssertionError("overflow detected");
+        }
         int GCD = gcd(newNum, newDenom);
 
         return new Rational(newNum / GCD, newDenom /GCD); 
@@ -152,7 +154,7 @@ public class Rational{
 		StdOut.println("r3: " + r3);
 		StdOut.println("r4: " + r4);
 		StdOut.println("Will attempt r3*r4 ...");
-		Rational ofl = r3.plus(r4);
+		Rational ofl = r3.times(r4);
 		StdOut.println("r3*r4 = " + ofl);
     }
 
