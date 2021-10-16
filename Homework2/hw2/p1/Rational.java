@@ -38,7 +38,7 @@ public class Rational{
         return numerator + "/" + denominator;
     }
 
-    public static void main(string[] args){
+    public static void main(String[] args){
         Rational test = new Rational(5,4);
         Rational.toString(test);
     }
