@@ -50,14 +50,12 @@ public class Rational{
     // }
 
     public Rational plus(Rational that){
-        long GCDNum = gcd(this.num, that.num);
-        long GCDDenom = gcd(this.denom, that.denom);
-        //check for overflow
-        long bigNumer = (((long)this.num / GCDNum) * ((long)that.denom / GCDDenom)) + (((long)that.num / GCDNum) * ((long)this.denom / GCDDenom));
-        long bigDenom = (long)this.denom * ((long)that.denom / GCDDenom);
-
+        long bigNumer = (long)this.num * (long)that.denom + (long)that.num  *(long)this.denom;
+        long bigDenom = (long)this.denom * (long)that.denom;
+        long GCD = gcd( bigNumer,bigDenom);
+        bigNumer/= GCD;
+        bigDenom/=GCD;
         StdOut.println(bigNumer + " " + bigDenom);
-        StdOut.println(GCDNum + " " + GCDDenom);
         
         if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
