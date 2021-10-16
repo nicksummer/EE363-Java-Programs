@@ -11,10 +11,10 @@ public class Rational{
         long newGcd1 = gcd(this.num, that.num);
         long newGcd2 = gcd(this.denom, that.denom);
 
-        long newNum = this.num * that.denom + that.num * this.denom;
-        long newDenom = this.denom * that.denom;
+        long newNum = (this.num / newGcd1) * (that.denom * newGcd2) + (that.num / newGcd1) * (this.denom / newGcd2);
+        long newDenom = this.denom * (that.denom / newGcd2);
 
-        Rational addition = new Rational(newNum / newGcd2, newDenom / newGcd1);
+        Rational addition = new Rational(newNum , newDenom);
 
         return addition;
     }
