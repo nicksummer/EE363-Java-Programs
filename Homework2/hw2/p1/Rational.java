@@ -19,7 +19,9 @@ public class Rational{
 
     public Rational plus(Rational that){
         long GCDNum = gcd(this.num, that.num);
+        StdOut.println(GCDNum);
         long GCDDenom = gcd(this.denom, that.denom);
+        StdOut.println(GCDDenom);
 
         Rational addition = new Rational(((this.num / GCDNum) * (that.denom * GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
         
@@ -70,7 +72,7 @@ public class Rational{
 		StdOut.println("r2: " + r2);
 
         StdOut.println(gcd(2, 4));
-        
+
 		Rational rsum = r1.plus(r2);
 		StdOut.println("r1 + r2: " + rsum);
 		
