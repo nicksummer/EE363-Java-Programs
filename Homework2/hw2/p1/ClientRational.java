@@ -1,5 +1,5 @@
 package hw2.p1;
-import Rational;
+import Rational.java;
 import edu.princeton.cs.algs4.StdOut;
 
 public class ClientRational {
