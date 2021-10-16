@@ -147,7 +147,7 @@ public class Rational{
 		StdOut.println("\nOverflow test:");
 		StdOut.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE);
 		Rational r3 = new Rational(Integer.MAX_VALUE, 3);
-		Rational r4 = new Rational(10,1);
+		Rational r4 = new Rational(Integer.MAX_VALUE,1);
 		StdOut.println("r3: " + r3);
 		StdOut.println("r4: " + r4);
 		StdOut.println("Will attempt r3*r4 ...");
