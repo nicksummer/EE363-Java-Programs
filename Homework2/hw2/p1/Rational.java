@@ -7,6 +7,15 @@ public class Rational{
     private long num;
     private long denom;
 
+    public Rational minus(Rational that){
+        long GCDNum = gcd(this.num, that.num);
+        long GCDDenom = gcd(this.denom, that.denom);
+
+        long newNum = (this.num / GCDNum) * (that.denom * GCDDenom) - (that.num / GCDNum) * (this.denom / GCDDenom);
+        long newDenom = this.denom * (that.denom / GCDDenom);
+
+    }
+
     public Rational plus(Rational that){
         long GCDNum = gcd(this.num, that.num);
         long GCDDenom = gcd(this.denom, that.denom);
@@ -63,8 +72,8 @@ public class Rational{
 		Rational rsum = r1.plus(r2);
 		StdOut.println("r1 + r2: " + rsum);
 		
-		//Rational rdiff = r1.minus(r2);
-		//StdOut.println("r1 - r2: " + rdiff);
+		Rational rdiff = r1.minus(r2);
+		StdOut.println("r1 - r2: " + rdiff);
 		
 		//Rational rprod = r1.times(r2);
 		//StdOut.println("r1 * r2: " + rprod);
