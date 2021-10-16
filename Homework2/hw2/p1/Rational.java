@@ -149,7 +149,7 @@ public class Rational{
 		StdOut.println("r3: " + r3);
 		StdOut.println("r4: " + r4);
 		StdOut.println("Will attempt r3+r4 ...");
-		Rational ofl = r3.times(r4);
+		Rational ofl = r3.plus(r4);
 		StdOut.println("r3+r4 = " + ofl);
     }
 
