@@ -75,8 +75,8 @@ public class Rational{
 		Rational rsum = r1.plus(r2);
 		StdOut.println("r1 + r2: " + rsum);
 		
-		// Rational rdiff = r1.minus(r2);
-		// StdOut.println("r1 - r2: " + rdiff);
+		Rational rdiff = r1.minus(r2);
+		StdOut.println("r1 - r2: " + rdiff);
 		
 		//Rational rprod = r1.times(r2);
 		//StdOut.println("r1 * r2: " + rprod);
