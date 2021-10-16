@@ -49,23 +49,23 @@ public class Rational{
     //     return addition;
     // }
 
-    // public Rational plus(Rational that){
-    //     int GCDNum = gcd(this.num, that.num);
-    //     int GCDDenom = gcd(this.denom, that.denom);
-    //     //check for overflow
-    //     long bigNumer = (((long)this.num / GCDNum) * ((long)that.denom / GCDDenom)) + (((long)that.num / GCDNum) * ((long)this.denom / GCDDenom));
-    //     long bigDenomi = (long)this.denom * ((long)that.denom / GCDDenom);
+    public Rational plus(Rational that){
+        long GCDNum = gcd(this.num, that.num);
+        long GCDDenom = gcd(this.denom, that.denom);
+        //check for overflow
+        long bigNumer = (((long)this.num / GCDNum) * ((long)that.denom / GCDDenom)) + (((long)that.num / GCDNum) * ((long)this.denom / GCDDenom));
+        long bigDenom = (long)this.denom * ((long)that.denom / GCDDenom);
         
-    //     if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenomi > Integer.MAX_VALUE){
-    //         throw new AssertionError("overflow detected");
-    //     }
+        if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenomi > Integer.MAX_VALUE){
+            throw new AssertionError("overflow detected");
+        }
 
-    //     Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
+        Rational addition = new Rational((int)bigNumer), (int)bigDenom);
         
         
 
-    //     return addition;
-    // }
+        return addition;
+    }
     public Rational(int numerator, int denominator){
         if(denominator == 0){
             throw new RuntimeException("divide by zero error");
@@ -101,8 +101,8 @@ public class Rational{
 		StdOut.println("r1: " + r1);
 		StdOut.println("r2: " + r2);
 
-		// Rational rsum = r1.plus(r2);
-		// StdOut.println("r1 + r2: " + rsum);
+		Rational rsum = r1.plus(r2);
+		StdOut.println("r1 + r2: " + rsum);
 		
 		// Rational rdiff = r1.minus(r2);
 		// StdOut.println("r1 - r2: " + rdiff);
