@@ -25,7 +25,7 @@ public class Rational{
         
 
         StdOut.println(bigNum + " " + bigDenom);
-        StdOut.println(bigGCD);
+        StdOut.println(GCD);
 
         if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
