@@ -27,19 +27,17 @@ public class Rational{
         return new Rational((int)bigNum, (int)bigDenom); 
     }
 
-    // public Rational times(Rational that){
-    //     int newNum = (this.num * that.num);
-    //     int newDenom = (this.denom * that.denom);
-    //     int GCD = gcd(newNum, newDenom);
-    //     //check for overflow
-    //     long bigNum = (long) this.num * (long) that.num / GCD;
-    //     long bigDenom = (long) this.denom * (long) that.denom / GCD;
-    //     if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
-    //         throw new AssertionError("overflow detected");
-    //     }
+    public Rational times(Rational that){
+        long bigGCD = gcd((long) this.num * (long) that.num, (long) this.denom * (long) that.denom);
+        long bigNum = (long) this.num * (long) that.num / bigGCD;
+        long bigDenom = (long) this.denom * (long) that.denom / bigGCD;
+        
+        if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
+            throw new AssertionError("overflow detected");
+        }
 
-    //     return new Rational(newNum / GCD, newDenom /GCD); 
-    // }
+        return new Rational((int)bigNum, (int)bigDenom); 
+    }
 
     // public Rational minus(Rational that){
     //     int GCDNum = gcd(this.num, that.num);
@@ -98,10 +96,10 @@ public class Rational{
 
     public static void main(String[] args){
 
-		// Rational r1 = new Rational(5, 6);
-		// Rational r2 = new Rational(3, 4);
-		// StdOut.println("r1: " + r1);
-		// StdOut.println("r2: " + r2);
+		Rational r1 = new Rational(5, 6);
+		Rational r2 = new Rational(3, 4);
+		StdOut.println("r1: " + r1);
+		StdOut.println("r2: " + r2);
 
 		// Rational rsum = r1.plus(r2);
 		// StdOut.println("r1 + r2: " + rsum);
@@ -109,8 +107,8 @@ public class Rational{
 		// Rational rdiff = r1.minus(r2);
 		// StdOut.println("r1 - r2: " + rdiff);
 		
-		// Rational rprod = r1.times(r2);
-		// StdOut.println("r1 * r2: " + rprod);
+		Rational rprod = r1.times(r2);
+		StdOut.println("r1 * r2: " + rprod);
 		
 		// Rational rquot = r1.dividedBy(r2);
 		// StdOut.println("r1 / r2: " + rquot);
@@ -154,7 +152,7 @@ public class Rational{
 		StdOut.println("r3: " + r3);
 		StdOut.println("r4: " + r4);
 		StdOut.println("Will attempt r3+r4 ...");
-		Rational ofl = r3.dividedBy(r4);
+		Rational ofl = r3.times(r4);
 		StdOut.println("r3+r4 = " + ofl);
     }
 
