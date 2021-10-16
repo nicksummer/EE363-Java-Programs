@@ -9,8 +9,6 @@ public class Rational{
         int gcd = gcd(numerator, denominator);
         
         if(denominator == 0)
-            throw new IllegalArguementException("The denominator cannot be zero");
-
             int Gcd = gcd(numerator, denominator);
 
             if (numerator <= 0){
