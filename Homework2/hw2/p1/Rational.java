@@ -6,7 +6,7 @@ public class Rationals{
    
     public static int Rational(int numerator, int denominator){
 
-        int gcd = gcd(numerator, denominator)
+        int gcd = gcd(numerator, denominator);
         
         if(denominator == 0)
             throw new IllegalArguementException("The denominator cannot be zero");
