@@ -37,7 +37,7 @@ public class Rational{
 
     public static void main(String[] args){
         Rational test = new Rational(5,4);
-        System.out.println("\n"test);
+        System.out.println("\n" + test);
     }
 
 }
