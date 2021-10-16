@@ -40,8 +40,8 @@ public class Rational{
     public String toString(){
        if(denom == 1){ 
             return num + "";
-       }else if(num == denom){ 
-           return "1";
+    //    }else if(num == denom){ 
+    //        return "1";
        }else 
             return this.num + "/" + this.denom;
     }
