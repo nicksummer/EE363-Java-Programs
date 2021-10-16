@@ -24,7 +24,7 @@ public class Rational{
             throw new AssertionError("overflow detected");
         }
 
-        return new Rational(bigNum, bigDenom); 
+        return new Rational((int)bigNum, (int)bigDenom); 
     }
 
     // public Rational times(Rational that){
@@ -83,10 +83,7 @@ public class Rational{
                 this.denom = denominator;///Gcd;
             }
     }
-    public Rational(long numerator, long denominator){
-        this.Rational((int) numerator, (int) denominator);
-}
-
+   
     public static long gcd(long num, long denom){
         if (denom == 0){
             return num;
