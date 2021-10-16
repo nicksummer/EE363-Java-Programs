@@ -28,10 +28,7 @@ public class Rational{
         int r = a % b;
         return gcd(a, r);
     }
-
-    public static int Rational(int numerator, int denominator){
-        this(5,4);
-    }
+    
     public String toString(){
         if(denominator == 1)
             return numerator;
