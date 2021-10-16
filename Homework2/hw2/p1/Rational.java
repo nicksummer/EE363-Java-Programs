@@ -56,7 +56,7 @@ public class Rational{
             throw new AssertionError("overflow detected");
         }
 
-        Rational addition = new Rational(numer,denomi);
+        Rational addition = new Rational((int)numer,(int)denomi);
         
         
 
