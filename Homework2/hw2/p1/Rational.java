@@ -84,7 +84,7 @@ public class Rational{
             }
     }
     public Rational(long numerator, long denominator){
-        Rational((int) numerator, (int) denominator);
+        this.Rational((int) numerator, (int) denominator);
 }
 
     public static long gcd(long num, long denom){
