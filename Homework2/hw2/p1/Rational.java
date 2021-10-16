@@ -8,7 +8,7 @@ public class Rational{
     private long denom;
 
     public Rational minus(Rational that){
-        Rational that = new Rational(-num, denom);
+        that = Rational(-num, denom);
         long GCDNum = gcd(this.num, that.num);
         long GCDDenom = gcd(this.denom, that.denom);
 
