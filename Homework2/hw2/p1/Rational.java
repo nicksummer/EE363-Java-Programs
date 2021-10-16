@@ -1,7 +1,7 @@
 public class Rational{
     
-    private final int numerator;
-    private final int denominator;
+    // private final int numerator;
+    // private final int denominator;
 
    
     public int Rational(int Numerator, int Denominator){
