@@ -8,7 +8,14 @@ public class Rational{
     private long denom;
 
     public Rational minus(Rational that){
-        return this.plus(that.negated());
+        Rational that = new Rational(-num, denom);
+        long GCDNum = gcd(this.num, that.num);
+        long GCDDenom = gcd(this.denom, that.denom);
+
+        Rational addition = new Rational(((this.num / GCDNum) * (that.denom * GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
+        
+
+        return addition;
     }
 
     public Rational plus(Rational that){
