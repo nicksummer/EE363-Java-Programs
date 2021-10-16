@@ -1,6 +1,6 @@
 import edu.princeton.cs.algs4.StdOut;
 
-final class Rational{
+public final class Rational{
     private final int num;
     private final int denom;
     
