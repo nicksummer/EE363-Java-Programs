@@ -92,12 +92,12 @@ public class Rational{
             }
     }
 
-    public static long gcd(int num, int denom){
+    public static int gcd(long num, long denom){
         if (denom == 0){
-            return num;
+            return (int) num;
         }
         long mod_ab = num % denom;
-        return gcd(denom, mod_ab);
+        return gcd(denom, (int) mod_ab);
     }
 
     public String toString(){
