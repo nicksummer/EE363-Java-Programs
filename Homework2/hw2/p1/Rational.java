@@ -125,7 +125,7 @@ public class Rational{
 		StdOut.println("r1 equals n5: " + r1.equals(n5));
 		System.out.println();
 
-		another equals test (test contents, not just references)		
+		//another equals test (test contents, not just references)		
 		Rational cr2 = new Rational(5, 6);
 		StdOut.println("[Rational cr2 = new Rational(5, 6);]");
 		StdOut.println("r1: " + r1);
