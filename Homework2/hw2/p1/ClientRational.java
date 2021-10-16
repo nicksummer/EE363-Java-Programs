@@ -8,8 +8,8 @@ public static void main(String[] args){
 
 	StdOut.println("hello world");
 
-		// Rational test = new Rational(5,4);
-		// StdOut.println("r1: " + test);
+		Rational test = new Rational(5,4);
+		StdOut.println("r1: " + test);
 		// Rational r1 = new Rational(5, 6);
 		// Rational r2 = new Rational(3, 4);
 		// StdOut.println("r1: " + r1);
