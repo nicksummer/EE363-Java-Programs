@@ -1,5 +1,5 @@
 public class Rationals{
-    private Rational() { }
+    
     private final int numerator;
     private final int denominator;
 
