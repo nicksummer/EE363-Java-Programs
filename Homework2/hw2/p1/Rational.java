@@ -53,7 +53,7 @@ public class Rational{
             return num;
         }
         long mod_ab = num % denom;
-        return gcd(num, mod_ab);
+        return gcd(denom, mod_ab);
     }
 
     public String toString(){
