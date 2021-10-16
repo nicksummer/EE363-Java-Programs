@@ -50,10 +50,10 @@ public class Rational{
         long denomi = this.denom * (that.denom / GCDDenom);
 
         if (numer > Integer.MAX_VALUE || numer < Integer.MIN_VALUE){
-            throw new OverflowException("overflow detected");
+            throw new AssertionException("overflow detected");
         }
         if(denom > Integer.MAX_VALUE){
-            throw new OverflowException("overflow detected");
+            throw new AssertionException("overflow detected");
         }
 
         Rational addition = new Rational(numer,denomi);
