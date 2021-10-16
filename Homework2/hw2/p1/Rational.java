@@ -26,10 +26,10 @@ public class Rationals{
     public static int gcd(int a, int b){
         if (b == 0) return a;
         int r = a % b;
-        return gcd(a, r)
+        return gcd(a, r);
     }
 
-    public Rational(int numerator, int denominator){
+    public static int Rational(int numerator, int denominator){
         this(5,4);
     }
     public String toString(){
