@@ -14,7 +14,7 @@ public class Rational{
         long newNum = (this.num / newGcd1) * (that.denom * newGcd2) + (that.num / newGcd1) * (this.denom / newGcd2);
         long newDenom = this.denom * (that.denom / newGcd2);
 
-        Rational addition = new Rational((this.num / newGcd1) * (that.denom * newGcd2) + (that.num / newGcd1) * (this.denom / newGcd2), newDenom, this.denom * (that.denom / newGcd2));
+        Rational addition = new Rational((this.num / newGcd1) * (that.denom * newGcd2) + (that.num / newGcd1) * (this.denom / newGcd2), this.denom * (that.denom / newGcd2));
         
         addition.num *= newGcd1;
 
