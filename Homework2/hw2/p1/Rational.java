@@ -6,6 +6,13 @@ public class Rational{
 
     private long num;
     private long denom;
+    
+    public boolean equals(Rational that){
+        if(this.num == that.num && this.denom == that.denom){
+            return true;
+        }else
+            return false;
+    }
 
     public Rational dividedBy(Rational that){
         long newNum = (this.num * that.denom);
@@ -103,11 +110,11 @@ public class Rational{
 		StdOut.println("r1 / r2: " + rquot);
 
 
-		//System.out.println();
+		System.out.println();
 
-		//StdOut.println("[Rational cr1 = r1;]");
-		//Rational cr1 = r1;
-		//StdOut.println("cr1: " + cr1);
+		StdOut.println("[Rational cr1 = r1;]");
+		Rational cr1 = r1;
+		StdOut.println("cr1: " + cr1);
 		
 
 		//Rational n5 = new Rational(7, 8);
