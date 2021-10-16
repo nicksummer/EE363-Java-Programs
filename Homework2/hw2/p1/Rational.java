@@ -28,7 +28,7 @@ public class Rational{
         int r = a % b;
         return gcd(a, r);
     }
-    
+
     public String toString(){
         if(denominator == 1)
             return numerator;
@@ -36,6 +36,11 @@ public class Rational{
             return 0;
         else
         return numerator + "/" + denominator;
+    }
+
+    public static void main(string[] args){
+        Rational test = new Rational(5,4);
+        Rational.toString(test);
     }
 
 }
