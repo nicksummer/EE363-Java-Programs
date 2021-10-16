@@ -44,10 +44,7 @@ public class Rational{
 
     public Rational plus(Rational that){
         long GCDNum = gcd(this.num, that.num);
-        StdOut.println(GCDNum);
         long GCDDenom = gcd(this.denom, that.denom);
-        StdOut.println(GCDDenom);
-        StdOut.println(((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)));
 
         Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
         
