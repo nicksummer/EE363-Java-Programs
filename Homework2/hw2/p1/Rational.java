@@ -29,7 +29,6 @@ public class Rational{
     public String toString(){
        // if(denom == 1)
           //  return num;
-        else
         return this.num + "/" + this.denom;
     }
 
