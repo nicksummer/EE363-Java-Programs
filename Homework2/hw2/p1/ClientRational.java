@@ -4,12 +4,13 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class ClientRational {
 
-public static void main(String[] args) {
+public static void main(String[] args){
 
 		Rational test = new Rational();
+		StdOut.println("r1: " + r1);
 		// Rational r1 = new Rational(5, 6);
 		// Rational r2 = new Rational(3, 4);
-		// StdOut.println("r1: " + r1);
+		//StdOut.println("r1: " + r1);
 		// StdOut.println("r2: " + r2);
 
 		//Rational rsum = r1.plus(r2);
