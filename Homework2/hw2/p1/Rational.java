@@ -67,8 +67,8 @@ public class Rational{
 
     public static void main(String[] args){
        
-		Rational r1 = new Rational(1, 2);
-		Rational r2 = new Rational(1, 3);
+		Rational r1 = new Rational(5, 6);
+		Rational r2 = new Rational(3, 4);
 		StdOut.println("r1: " + r1);
 		StdOut.println("r2: " + r2);
 
