@@ -6,11 +6,9 @@ public class Rational{
    
     public int Rational(int numerator, int denominator){
 
-        int gcd = gcd(numerator, denominator);
+        int Gcd = gcd(numerator, denominator);
         
         if(denominator == 0)
-            int Gcd = gcd(numerator, denominator);
-
             if (numerator <= 0){
                 this.numerator = -numerator/Gcd;
                 this.denominator = -denominator/Gcd;
