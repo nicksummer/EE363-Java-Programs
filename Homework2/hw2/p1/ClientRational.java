@@ -2,7 +2,7 @@ package hw2.p1;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class ClientRational {
+class ClientRational {
 
 public static void main(String[] args){
 

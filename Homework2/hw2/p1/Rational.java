@@ -1,5 +1,3 @@
-import edu.princeton.cs.algs4.StdOut;
-
 public class Rational{
     private final int num;
     private final int denom;
@@ -42,9 +40,7 @@ public class Rational{
         long GCD = gcd( bigNumer,bigDenom);
         bigNumer/= GCD;
         bigDenom/= GCD;
-        
-        StdOut.println(bigNumer + " " + bigDenom);
-
+    
         if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
         }
