@@ -6,13 +6,10 @@ public class Rational{
     private long denom;
 
     public Rational plus(Rational that){
-        long gcd1 = gcd(this.num, that.denom);
-        long gcd2 = gcd(this.denom, that.num);
+        long newNum = this.num * that.denom + that.num * this.denom;
+        long newDenom = this.denom * that.denom;
 
-        Rational addition = new Rational((this.num / gcd1) * (that.num / gcd2) + (that.num / gcd1) * (this.denom / gcd2), this.denom * (that.denom / gcd2));
-
-        addition.num *= gcd1;
-        return addition;
+        return new Rational(newNum, newDenom);
     }
 
     public Rational(long numerator, long denominator){
