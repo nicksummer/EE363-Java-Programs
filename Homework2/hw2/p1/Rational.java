@@ -1,21 +1,22 @@
 public class Rational{
     
-    int numerator;
-    int denominator;
+    private final long num;
+    private final long denom;
 
    
-    public int Rational(int Numerator, int Denominator){
+    public int Rational(long numerator, long denominator){
 
-        int Gcd = gcd(numerator, denominator);
-        
-        if(denominator == 0)
-            if (numerator <= 0){
-                this.numerator = -Numerator/Gcd;
-                this.denominator = -Denominator/Gcd;
+        long Gcd = gcd(numerator, denominator);
+        if (denominator == 0){
+            throw new ArethmeticExcetption("denominator is zero")
+        }
+            if (numerator < 0){
+                numerator = -numerator;
+                denominator = -denominator;
             }
             else {
-                this.numerator = Numerator/Gcd;
-                this.denominator = Denominator/Gcd;
+                num = numerator = numerator/Gcd;
+                denom = denominator/Gcd;
             }
     }
 
@@ -36,7 +37,7 @@ public class Rational{
 
     public static void main(String[] args){
         Rational test = new Rational(5,4);
-        Rational.toString(test);
+        System.out.println("\n"test);
     }
 
 }
