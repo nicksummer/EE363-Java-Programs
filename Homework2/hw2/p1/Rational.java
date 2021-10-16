@@ -20,6 +20,12 @@ public class Rational{
 
         int GCD = gcd(newNum, newDenom);
 
+        long bigNum = (long) this.num * (long) that.denom / GCD;
+        long bigDenom = (long) this.denom * (long) that.num / GCD;
+        if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
+            throw new AssertionError("overflow detected");
+        }
+
         return new Rational(newNum / GCD, newDenom /GCD); 
     }
 
@@ -27,6 +33,7 @@ public class Rational{
         int newNum = (this.num * that.num);
         int newDenom = (this.denom * that.denom);
         int GCD = gcd(newNum, newDenom);
+        //check for overflow
         long bigNum = (long) this.num * (long) that.num / GCD;
         long bigDenom = (long) this.denom * (long) that.denom / GCD;
         if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
@@ -49,19 +56,15 @@ public class Rational{
     public Rational plus(Rational that){
         int GCDNum = gcd(this.num, that.num);
         int GCDDenom = gcd(this.denom, that.denom);
-        long numer = (((long)this.num / GCDNum) * ((long)that.denom / GCDDenom)) + (((long)that.num / GCDNum) * ((long)this.denom / GCDDenom));
-        long denomi = this.denom * (that.denom / GCDDenom);
-        StdOut.println(numer);
-        StdOut.println(Integer.MAX_VALUE);
-
-        if (numer > Integer.MAX_VALUE || numer < Integer.MIN_VALUE){
-            throw new AssertionError("overflow detected");
-        }
-        if(denom > Integer.MAX_VALUE){
+        //check for overflow
+        long bigNumer = (((long)this.num / GCDNum) * ((long)that.denom / GCDDenom)) + (((long)that.num / GCDNum) * ((long)this.denom / GCDDenom));
+        long bigDenomi = (long)this.denom * ((long)that.denom / GCDDenom);
+        
+        if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
         }
 
-        Rational addition = new Rational((int)numer,(int)denomi);
+        Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
         
         
 
