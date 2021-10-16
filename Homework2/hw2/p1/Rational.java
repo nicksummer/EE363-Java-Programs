@@ -27,52 +27,52 @@ public class Rational{
             throw new AssertionError("overflow detected");
         }
 
-        return new Rational((int)(bigNum), (int)(bigDenom)); 
+        return new Rational(bigNum, bigDenom); 
     }
 
-    public Rational times(Rational that){
-        int newNum = (this.num * that.num);
-        int newDenom = (this.denom * that.denom);
-        int GCD = gcd(newNum, newDenom);
-        //check for overflow
-        long bigNum = (long) this.num * (long) that.num / GCD;
-        long bigDenom = (long) this.denom * (long) that.denom / GCD;
-        if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
-            throw new AssertionError("overflow detected");
-        }
+    // public Rational times(Rational that){
+    //     int newNum = (this.num * that.num);
+    //     int newDenom = (this.denom * that.denom);
+    //     int GCD = gcd(newNum, newDenom);
+    //     //check for overflow
+    //     long bigNum = (long) this.num * (long) that.num / GCD;
+    //     long bigDenom = (long) this.denom * (long) that.denom / GCD;
+    //     if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
+    //         throw new AssertionError("overflow detected");
+    //     }
 
-        return new Rational(newNum / GCD, newDenom /GCD); 
-    }
+    //     return new Rational(newNum / GCD, newDenom /GCD); 
+    // }
 
-    public Rational minus(Rational that){
-        int GCDNum = gcd(this.num, that.num);
-        int GCDDenom = gcd(this.denom, that.denom);
+    // public Rational minus(Rational that){
+    //     int GCDNum = gcd(this.num, that.num);
+    //     int GCDDenom = gcd(this.denom, that.denom);
 
-        Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) - ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
+    //     Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) - ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
         
 
-        return addition;
-    }
+    //     return addition;
+    // }
 
-    public Rational plus(Rational that){
-        int GCDNum = gcd(this.num, that.num);
-        int GCDDenom = gcd(this.denom, that.denom);
-        //check for overflow
-        long bigNumer = (((long)this.num / GCDNum) * ((long)that.denom / GCDDenom)) + (((long)that.num / GCDNum) * ((long)this.denom / GCDDenom));
-        long bigDenomi = (long)this.denom * ((long)that.denom / GCDDenom);
+    // public Rational plus(Rational that){
+    //     int GCDNum = gcd(this.num, that.num);
+    //     int GCDDenom = gcd(this.denom, that.denom);
+    //     //check for overflow
+    //     long bigNumer = (((long)this.num / GCDNum) * ((long)that.denom / GCDDenom)) + (((long)that.num / GCDNum) * ((long)this.denom / GCDDenom));
+    //     long bigDenomi = (long)this.denom * ((long)that.denom / GCDDenom);
         
-        if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenomi > Integer.MAX_VALUE){
-            throw new AssertionError("overflow detected");
-        }
+    //     if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenomi > Integer.MAX_VALUE){
+    //         throw new AssertionError("overflow detected");
+    //     }
 
-        Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
+    //     Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
         
         
 
-        return addition;
-    }
-    public Rational negated(){
-        return new Rational(-num, denom);
+    //     return addition;
+    // }
+    public Rational(long numerator, long denominator){
+            Rational((int) numerator, (int) denominator);
     }
     public Rational(int numerator, int denominator){
         if(denominator == 0){
@@ -85,17 +85,17 @@ public class Rational{
                 denom = -denom;
             }
             else {
-                this.num = numerator = numerator;///Gcd;
+                this.num = numerator;///Gcd;
                 this.denom = denominator;///Gcd;
             }
     }
 
-    public static int gcd(long num, long denom){
+    public static long gcd(long num, long denom){
         if (denom == 0){
-            return (int) num;
+            return num;
         }
         long mod_ab = num % denom;
-        return gcd(denom, (int) mod_ab);
+        return gcd(denom, mod_ab);
     }
 
     public String toString(){
@@ -104,53 +104,53 @@ public class Rational{
 
     public static void main(String[] args){
 
-		Rational r1 = new Rational(5, 6);
-		Rational r2 = new Rational(3, 4);
-		StdOut.println("r1: " + r1);
-		StdOut.println("r2: " + r2);
+		// Rational r1 = new Rational(5, 6);
+		// Rational r2 = new Rational(3, 4);
+		// StdOut.println("r1: " + r1);
+		// StdOut.println("r2: " + r2);
 
-		Rational rsum = r1.plus(r2);
-		StdOut.println("r1 + r2: " + rsum);
+		// Rational rsum = r1.plus(r2);
+		// StdOut.println("r1 + r2: " + rsum);
 		
-		Rational rdiff = r1.minus(r2);
-		StdOut.println("r1 - r2: " + rdiff);
+		// Rational rdiff = r1.minus(r2);
+		// StdOut.println("r1 - r2: " + rdiff);
 		
-		Rational rprod = r1.times(r2);
-		StdOut.println("r1 * r2: " + rprod);
+		// Rational rprod = r1.times(r2);
+		// StdOut.println("r1 * r2: " + rprod);
 		
-		Rational rquot = r1.dividedBy(r2);
-		StdOut.println("r1 / r2: " + rquot);
+		// Rational rquot = r1.dividedBy(r2);
+		// StdOut.println("r1 / r2: " + rquot);
 
 
-		System.out.println();
+		// System.out.println();
 
-		StdOut.println("[Rational cr1 = r1;]");
-		Rational cr1 = r1;
-		StdOut.println("cr1: " + cr1);
+		// StdOut.println("[Rational cr1 = r1;]");
+		// Rational cr1 = r1;
+		// StdOut.println("cr1: " + cr1);
 		
 
-		Rational n5 = new Rational(7, 8);
-		StdOut.println("[Rational n5 = new Rational(7, 8);]");
-		StdOut.println("r1: " + r1);
-		StdOut.println("n5: " + n5);		
-		StdOut.println("r1 equals cr1: " + r1.equals(cr1));
-		StdOut.println("r1 equals n5: " + r1.equals(n5));
-		System.out.println();
+		// Rational n5 = new Rational(7, 8);
+		// StdOut.println("[Rational n5 = new Rational(7, 8);]");
+		// StdOut.println("r1: " + r1);
+		// StdOut.println("n5: " + n5);		
+		// StdOut.println("r1 equals cr1: " + r1.equals(cr1));
+		// StdOut.println("r1 equals n5: " + r1.equals(n5));
+		// System.out.println();
 
-		//another equals test (test contents, not just references)		
-		Rational cr2 = new Rational(5, 6);
-		StdOut.println("[Rational cr2 = new Rational(5, 6);]");
-		StdOut.println("r1: " + r1);
-		StdOut.println("cr2: " + cr2);		
-		StdOut.println("r1 equals cr2: " + r1.equals(cr2));
-		System.out.println();
+		// //another equals test (test contents, not just references)		
+		// Rational cr2 = new Rational(5, 6);
+		// StdOut.println("[Rational cr2 = new Rational(5, 6);]");
+		// StdOut.println("r1: " + r1);
+		// StdOut.println("cr2: " + cr2);		
+		// StdOut.println("r1 equals cr2: " + r1.equals(cr2));
+		// System.out.println();
 				
 
 
-		Rational r2plusn5 = r2.plus(n5);
-		Rational res_r2plusn5 = new Rational(15, 8);
-		StdOut.println("r2 + n5: "+ r2plusn5); 
-		StdOut.println("res_r2plusn5: " + r2plusn5);
+		// Rational r2plusn5 = r2.plus(n5);
+		// Rational res_r2plusn5 = new Rational(15, 8);
+		// StdOut.println("r2 + n5: "+ r2plusn5); 
+		// StdOut.println("res_r2plusn5: " + r2plusn5);
 		
 		//use VM flag '-ea' to cause overflow exception
 		StdOut.println("\nOverflow test:");
