@@ -8,11 +8,15 @@ public class Rational{
     private long denom;
 
     public Rational plus(Rational that){
-        long newGcd = gcd(this.num, this.denom);
+        long newGcd1 = gcd(this.num, that.num);
+        long newGcd2 = gcd(this.denom, that.denom);
+
         long newNum = this.num * that.denom + that.num * this.denom;
         long newDenom = this.denom * that.denom;
 
-        return new Rational(newNum, newDenom);
+        Rational addition = new Rational(newNum / newGcd1, newDenom / newGcd2);
+
+        return addition;
     }
 
     public Rational(long numerator, long denominator){
@@ -50,8 +54,6 @@ public class Rational{
        
 		Rational r1 = new Rational(5, 6);
 		Rational r2 = new Rational(3, 4);
-        long gcd = new Rational.gcd(r1);
-        StdOut.println(gcd);
 		StdOut.println("r1: " + r1);
 		StdOut.println("r2: " + r2);
 
