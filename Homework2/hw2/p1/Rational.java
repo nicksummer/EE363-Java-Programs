@@ -7,6 +7,15 @@ public class Rational{
     private long num;
     private long denom;
 
+    public Rational dividedBy(Rational that){
+        long newNum = (this.num * that.denom);
+        long newDenom = (this.denom * that.num);
+
+        long GCD = gcd(newNum, newDenom);
+
+        return new Rational(newNum / GCD, newDenom /GCD); 
+    }
+
     public Rational times(Rational that){
         long newNum = (this.num * that.num);
         long newDenom = (this.denom * that.denom);
