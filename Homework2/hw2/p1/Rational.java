@@ -11,7 +11,7 @@ public class Rational{
         long GCDNum = gcd(this.num, that.num);
         long GCDDenom = gcd(this.denom, that.denom);
 
-        Rational subtraction = new Rational(((this.num / GCDNum) * (that.denom * GCDDenom)) - ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
+        Rational subtraction = new Rational(((that.num / GCDNum) * (this.denom * GCDDenom)) - ((this.num / GCDNum) * (that.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
 
         return subtraction;
 
