@@ -20,9 +20,9 @@ public class Rational{
             }
     }
 
-    public static int gcd(int a, int b){
+    public static long gcd(long a, long b){
         if (b == 0) return a;
-        int r = a % b;
+        long r = a % b;
         return gcd(a, r);
     }
 
