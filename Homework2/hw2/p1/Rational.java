@@ -17,13 +17,14 @@ public class Rational{
     public Rational dividedBy(Rational that){
         int newNum = (this.num * that.denom);
         int newDenom = (this.denom * that.num);
-
         int GCD = gcd(newNum, newDenom);
+        long bigGCD = gcd(bigNum, bigDenom);
+        long bigNum = (long) this.num * (long) that.denom / bigGCD;
+        long bigDenom = (long) this.denom * (long) that.num / bigGCD;
+        
 
-        long bigNum = (long) this.num * (long) that.denom / GCD;
-        long bigDenom = (long) this.denom * (long) that.num / GCD;
         StdOut.println(bigNum + " " + bigDenom);
-        StdOut.println(GCD);
+        StdOut.println(bigGCD);
 
         if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
