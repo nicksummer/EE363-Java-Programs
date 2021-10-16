@@ -15,8 +15,8 @@ public class Rational{
                 denom = -denom;
             }
             else {
-                num = numerator = numerator/Gcd;
-                denom = denominator/Gcd;
+                this.num = numerator = numerator/Gcd;
+                this.denom = denominator/Gcd;
             }
     }
 
@@ -27,8 +27,8 @@ public class Rational{
     }
 
     public String toString(){
-        if(denom == 1)
-            return this.num;
+       // if(denom == 1)
+          //  return num;
         else
         return this.num + "/" + this.denom;
     }
