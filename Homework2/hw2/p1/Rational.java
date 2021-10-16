@@ -20,18 +20,22 @@ public class Rational{
 
         int GCD = gcd(newNum, newDenom);
 
-        return new Rational((int)newNum / GCD, (int)newDenom / GCD); 
+        return new Rational(newNum / GCD, newDenom /GCD); 
     }
 
     public Rational times(Rational that){
-        long newNum = ((long)this.num * (long)that.num);
-        long newDenom = (this.denom * that.denom);
-        if (newNum > Integer.MAX_VALUE || newNum < Integer.MIN_VALUE){
+        int newNum = (this.num * that.num);
+        int newDenom = (this.denom * that.denom);
+        int GCD = gcd(newNum, newDenom);
+        long bigNum = (long) this.num * (long) that.num / GCD;
+        long bigDenom = (long) this.denom * (long) that.denom / GCD;
+        if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
         }
-        int GCD = gcd((int)newNum, (int)newDenom);
 
-        return new Rational((int)newNum / GCD, (int)newDenom /GCD); 
+        int GCD = gcd(newNum, newDenom);
+
+        return new Rational(newNum / GCD, newDenom /GCD); 
     }
 
     public Rational minus(Rational that){
