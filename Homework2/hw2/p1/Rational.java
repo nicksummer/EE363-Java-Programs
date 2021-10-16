@@ -49,7 +49,7 @@ public class Rational{
         long numer = ((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom));
         long denomi = this.denom * (that.denom / GCDDenom);
         StdOut.println(numer);
-        StdOut.println(Interger.MAX_VALUE);
+        StdOut.println(Integer.MAX_VALUE);
 
         if (numer > Integer.MAX_VALUE || numer < Integer.MIN_VALUE){
             throw new AssertionError("overflow detected");
