@@ -95,9 +95,6 @@ public class Rational{
 
     public static void main(String[] args){
 
-        Rational n = new Rational(1,0);
-        StdOut.println("n: " +n);
-       
 		// Rational r1 = new Rational(5, 6);
 		// Rational r2 = new Rational(3, 4);
 		// StdOut.println("r1: " + r1);
@@ -146,16 +143,16 @@ public class Rational{
 		// StdOut.println("r2 + n5: "+ r2plusn5); 
 		// StdOut.println("res_r2plusn5: " + r2plusn5);
 		
-		// //use VM flag '-ea' to cause overflow exception
-		// StdOut.println("\nOverflow test:");
-		// StdOut.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE);
-		// Rational r3 = new Rational(Integer.MAX_VALUE, 3);
-		// Rational r4 = new Rational(10,1);
-		// StdOut.println("r3: " + r3);
-		// StdOut.println("r4: " + r4);
-		// StdOut.println("Will attempt r3*r4 ...");
-		// Rational ofl = r3.times(r4);
-		// StdOut.println("r3*r4 = " + ofl);
+		//use VM flag '-ea' to cause overflow exception
+		StdOut.println("\nOverflow test:");
+		StdOut.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE);
+		Rational r3 = new Rational(Integer.MAX_VALUE, 3);
+		Rational r4 = new Rational(10,1);
+		StdOut.println("r3: " + r3);
+		StdOut.println("r4: " + r4);
+		StdOut.println("Will attempt r3*r4 ...");
+		Rational ofl = r3.times(r4);
+		StdOut.println("r3*r4 = " + ofl);
     }
 
 }
