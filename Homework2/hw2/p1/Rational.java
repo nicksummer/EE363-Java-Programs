@@ -32,7 +32,7 @@ public class Rational{
     }
 
     public static void main(String[] args){
-        Rational test = new Rational(5,4);
+        Rational test = new Rational(5,1);
         System.out.println("\n" + test);
     }
 
