@@ -27,7 +27,7 @@ public class Rational{
             throw new AssertionError("overflow detected");
         }
 
-        return new Rational((int)(newNum / GCD), (int)(newDenom /GCD)); 
+        return new Rational((int)(bigNum / GCD), (int)(bigDenom /GCD)); 
     }
 
     public Rational times(Rational that){
