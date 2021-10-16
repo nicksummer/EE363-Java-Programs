@@ -29,7 +29,7 @@ public class Rational{
         if (newNum > Integer.MAX_VALUE || newNum < Integer.MIN_VALUE){
             throw new AssertionError("overflow detected");
         }
-        int GCD = gcd(newNum, newDenom);
+        int GCD = gcd((int)newNum, (int)newDenom);
 
         return new Rational(newNum / GCD, newDenom /GCD); 
     }
