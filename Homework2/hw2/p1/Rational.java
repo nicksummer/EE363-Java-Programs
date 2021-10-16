@@ -135,10 +135,10 @@ public class Rational{
 				
 
 
-		//Rational r2plusn5 = r2.plus(n5);
-		//Rational res_r2plusn5 = new Rational(15, 8);
-		//StdOut.println("r2 + n5: "+ r2plusn5); 
-		//StdOut.println("res_r2plusn5: " + r2plusn5);
+		Rational r2plusn5 = r2.plus(n5);
+		Rational res_r2plusn5 = new Rational(15, 8);
+		StdOut.println("r2 + n5: "+ r2plusn5); 
+		StdOut.println("res_r2plusn5: " + r2plusn5);
 		
 		//use VM flag '-ea' to cause overflow exception
 		//StdOut.println("\nOverflow test:");
