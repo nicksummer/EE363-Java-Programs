@@ -27,12 +27,12 @@ public class Rational{
     }
 
     public String toString(){
-        if(denominator == 1)
-            return numerator;
-        else if (numerator == 0)
+        if(denom == 1)
+            return num;
+        else if (num == 0)
             return 0;
         else
-        return numerator + "/" + denominator;
+        return num + "/" + denom;
     }
 
     public static void main(String[] args){
