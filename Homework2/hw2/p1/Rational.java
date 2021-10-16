@@ -43,15 +43,15 @@ public class Rational{
     }
 
     public Rational plus(Rational that){
-        long GCDNum = gcd(this.num, that.num);
-        long GCDDenom = gcd(this.denom, that.denom);
+        int GCDNum = gcd(this.num, that.num);
+        int GCDDenom = gcd(this.denom, that.denom);
 
         long numer = ((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom));
         long denomi = this.denom * (that.denom / GCDDenom);
         StdOut.println(numer);
         StdOut.println(Integer.MAX_VALUE);
 
-        if (numer > Integer.MAX_VALUE || numer < Integer.MIN_VALUE){
+        if (1) //numer > Integer.MAX_VALUE || numer < Integer.MIN_VALUE){
             throw new AssertionError("overflow detected");
         }
         if(denom > Integer.MAX_VALUE){
