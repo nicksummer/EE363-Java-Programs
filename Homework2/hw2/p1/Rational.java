@@ -48,7 +48,8 @@ public class Rational{
        
 		Rational r1 = new Rational(5, 6);
 		Rational r2 = new Rational(3, 4);
-        StdOut.println("GCD" + gcd(r1));
+        Rational gcd = new gcd(r1);
+        StdOut.println(gcd);
 		StdOut.println("r1: " + r1);
 		StdOut.println("r2: " + r2);
 
