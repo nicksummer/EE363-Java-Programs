@@ -33,8 +33,6 @@ public class Rational{
             throw new AssertionError("overflow detected");
         }
 
-        int GCD = gcd(newNum, newDenom);
-
         return new Rational(newNum / GCD, newDenom /GCD); 
     }
 
