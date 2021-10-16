@@ -60,7 +60,7 @@ public class Rational{
         long bigNumer = (((long)this.num / GCDNum) * ((long)that.denom / GCDDenom)) + (((long)that.num / GCDNum) * ((long)this.denom / GCDDenom));
         long bigDenomi = (long)this.denom * ((long)that.denom / GCDDenom);
         
-        if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
+        if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenomi > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
         }
 
