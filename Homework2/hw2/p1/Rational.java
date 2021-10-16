@@ -71,8 +71,6 @@ public class Rational{
 		StdOut.println("r1: " + r1);
 		StdOut.println("r2: " + r2);
 
-        StdOut.println(gcd(2, 4));
-
 		Rational rsum = r1.plus(r2);
 		StdOut.println("r1 + r2: " + rsum);
 		
