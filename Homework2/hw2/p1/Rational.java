@@ -8,15 +8,15 @@ public class Rational{
     private long denom;
 
     public Rational plus(Rational that){
-        long newGcd1 = gcd(this.num, that.num);
-        long newGcd2 = gcd(this.denom, that.denom);
+        long GCDNum = gcd(this.num, that.num);
+        long GCDDenom = gcd(this.denom, that.denom);
 
-        long newNum = (this.num / newGcd1) * (that.denom * newGcd2) + (that.num / newGcd1) * (this.denom / newGcd2);
-        long newDenom = this.denom * (that.denom / newGcd2);
+        long newNum = (this.num / GCDNum) * (that.denom * GCDenom) + (that.num / GCDNum) * (this.denom / GCDenom);
+        long newDenom = this.denom * (that.denom / GCDenom);
 
-        Rational addition = new Rational((this.num / newGcd1) * (that.denom * newGcd2) + (that.num / newGcd1) * (this.denom / newGcd2), this.denom * (that.denom / newGcd2));
+        Rational addition = new Rational((this.num / GCDNum) * (that.denom * GCDenom) + (that.num / GCDNum) * (this.denom / GCDenom), this.denom * (that.denom / GCDenom));
         
-        addition.num *= newGcd1;
+        addition.num *= GCDNum;
 
         return addition;
     }
@@ -37,10 +37,12 @@ public class Rational{
             }
     }
 
-    public static long gcd(long a, long b){
-        if (b == 0) return a;
-        long mod_ab = a % b;
-        return gcd(a, mod_ab);
+    public static long gcd(long num, long denom){
+        if (denom == 0){
+            return num;
+        }
+        long mod_ab = num % denom;
+        return mod_ab;
     }
 
     public String toString(){
