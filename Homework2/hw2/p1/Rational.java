@@ -4,8 +4,8 @@ public class Rational{
     
     private Rational() { }
 
-    private long num;
-    private long denom;
+    private int num;
+    private int denom;
     
     public boolean equals(Rational that){
         if(this.num == that.num && this.denom == that.denom){
@@ -15,26 +15,26 @@ public class Rational{
     }
 
     public Rational dividedBy(Rational that){
-        long newNum = (this.num * that.denom);
-        long newDenom = (this.denom * that.num);
+        int newNum = (this.num * that.denom);
+        int newDenom = (this.denom * that.num);
 
-        long GCD = gcd(newNum, newDenom);
+        int GCD = gcd(newNum, newDenom);
 
         return new Rational(newNum / GCD, newDenom /GCD); 
     }
 
     public Rational times(Rational that){
-        long newNum = (this.num * that.num);
-        long newDenom = (this.denom * that.denom);
+        int newNum = (this.num * that.num);
+        int newDenom = (this.denom * that.denom);
 
-        long GCD = gcd(newNum, newDenom);
+        int GCD = gcd(newNum, newDenom);
 
         return new Rational(newNum / GCD, newDenom /GCD); 
     }
 
     public Rational minus(Rational that){
-        long GCDNum = gcd(this.num, that.num);
-        long GCDDenom = gcd(this.denom, that.denom);
+        int GCDNum = gcd(this.num, that.num);
+        int GCDDenom = gcd(this.denom, that.denom);
 
         Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) - ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
         
@@ -43,8 +43,8 @@ public class Rational{
     }
 
     public Rational plus(Rational that){
-        long GCDNum = gcd(this.num, that.num);
-        long GCDDenom = gcd(this.denom, that.denom);
+        int GCDNum = gcd(this.num, that.num);
+        int GCDDenom = gcd(this.denom, that.denom);
 
         Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
         
@@ -54,12 +54,12 @@ public class Rational{
     public Rational negated(){
         return new Rational(-num, denom);
     }
-    public Rational(long numerator, long denominator){
+    public Rational(int numerator, int denominator){
         if(denom == 0){
             throw new RuntimeException("divide by zero error");
         }
 
-        long Gcd = gcd(numerator, denominator);
+        int Gcd = gcd(numerator, denominator);
             if (numerator < 0){
                 num = -num;
                 denom = -denom;
@@ -70,11 +70,11 @@ public class Rational{
             }
     }
 
-    public static long gcd(long num, long denom){
+    public static int gcd(int num, int denom){
         if (denom == 0){
             return num;
         }
-        long mod_ab = num % denom;
+        int mod_ab = num % denom;
         return gcd(denom, mod_ab);
     }
 
