@@ -158,9 +158,9 @@ public class Rational{
 		Rational r4 = new Rational(Integer.MAX_VALUE,1);
 		StdOut.println("r3: " + r3);
 		StdOut.println("r4: " + r4);
-		StdOut.println("Will attempt r3*r4 ...");
-		Rational ofl = r3.plus(r4);
-		StdOut.println("r3*r4 = " + ofl);
+		StdOut.println("Will attempt r3+r4 ...");
+		Rational ofl = r3.dividedBy(r4);
+		StdOut.println("r3+r4 = " + ofl);
     }
 
 }
