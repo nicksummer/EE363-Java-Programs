@@ -8,8 +8,7 @@ public class Rational{
     private long denom;
 
     public Rational minus(Rational that){
-        return this.plus(that.negation());
-
+        return this.plus(that.negated());
     }
 
     public Rational plus(Rational that){
@@ -21,7 +20,7 @@ public class Rational{
 
         return addition;
     }
-    public Rational negation(){
+    public Rational negated(){
         return new Rational(-num, denom);
     }
     public Rational(long numerator, long denominator){
