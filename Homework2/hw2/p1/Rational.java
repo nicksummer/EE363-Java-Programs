@@ -46,7 +46,18 @@ public class Rational{
         int GCDNum = gcd(this.num, that.num);
         int GCDDenom = gcd(this.denom, that.denom);
 
-        Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
+        long numer = ((this.num / GCDNum) * (that.denom / GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom));
+        long denomi = this.denom * (that.denom / GCDDenom);
+
+        if (numer > Integer.MAX_VALUE || numer < Integer.MIN_VALUE){
+            throw new OverflowException("overflow detected");
+        }
+        if(denom > Integer.MAX_VALUE){
+            throw new OverflowException("overflow detected");
+        }
+
+        Rational addition = new Rational(numer,denomi);
+        
         
 
         return addition;
