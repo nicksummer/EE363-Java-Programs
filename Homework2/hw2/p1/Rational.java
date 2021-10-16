@@ -20,7 +20,7 @@ public class Rational{
 
         int GCD = gcd(newNum, newDenom);
 
-        return new Rational(newNum / GCD, newDenom /GCD); 
+        return new Rational((int)newNum / GCD, (int)newDenom / GCD); 
     }
 
     public Rational times(Rational that){
