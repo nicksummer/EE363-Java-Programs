@@ -20,9 +20,6 @@ public class Rational{
         long bigNum = (long) this.num * (long) that.denom / bigGCD;
         long bigDenom = (long) this.denom * (long) that.num / bigGCD;
         
-        StdOut.println(bigNum + " " + bigDenom);
-        StdOut.println(bigGCD);
-
         if (bigNum > Integer.MAX_VALUE || bigNum < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
         }
@@ -71,9 +68,6 @@ public class Rational{
 
     //     return addition;
     // }
-    public Rational(long numerator, long denominator){
-            Rational((int) numerator, (int) denominator);
-    }
     public Rational(int numerator, int denominator){
         if(denominator == 0){
             throw new RuntimeException("divide by zero error");
@@ -89,6 +83,9 @@ public class Rational{
                 this.denom = denominator;///Gcd;
             }
     }
+    public Rational(long numerator, long denominator){
+        Rational((int) numerator, (int) denominator);
+}
 
     public static long gcd(long num, long denom){
         if (denom == 0){
