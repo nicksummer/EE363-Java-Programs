@@ -71,15 +71,17 @@ final class Rational{
         if(denominator == 0){
             throw new RuntimeException("divide by zero error");
         }
-
+        
         int Gcd = (int)gcd(numerator, denominator);
+        numerator/=Gcd;
+        denominator/=Gcd;
             if (denominator < 0){
-                num = -num;
-                denom = -denom;
+                num = -numerator ;
+                denom = -denominator;
             }
             else {
-                this.num = numerator/Gcd;
-                this.denom = denominator/Gcd;
+                this.num = numerator;
+                this.denom = denominator;
             }
     }
    
