@@ -99,7 +99,7 @@ public class Rational{
 		Rational rprod = r1.times(r2);
 		StdOut.println("r1 * r2: " + rprod);
 		
-		Rational rquot = r1.divides(r2);
+		Rational rquot = r1.dividedBy(r2);
 		StdOut.println("r1 / r2: " + rquot);
 
 
