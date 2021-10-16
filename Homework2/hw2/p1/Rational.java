@@ -8,7 +8,7 @@ public class Rational{
 
         long Gcd = gcd(numerator, denominator);
         if (denominator == 0){
-            throw new ArethmeticExcetption("denominator is zero")
+            throw new ArethmeticExcetption("denominator is zero");
         }
             if (numerator < 0){
                 numerator = -numerator;
