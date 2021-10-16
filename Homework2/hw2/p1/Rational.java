@@ -73,14 +73,14 @@ public class Rational{
             throw new RuntimeException("divide by zero error");
         }
 
-        int Gcd = gcd(numerator, denominator);
+        int Gcd = (int)gcd(numerator, denominator);
             if (numerator < 0){
                 num = -num;
                 denom = -denom;
             }
             else {
-                this.num = numerator;///Gcd;
-                this.denom = denominator;///Gcd;
+                this.num = numerator/Gcd;
+                this.denom = denominator/Gcd;
             }
     }
    
