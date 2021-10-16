@@ -4,18 +4,18 @@ public class Rational{
     private final int denominator;
 
    
-    public int Rational(int numerator, int denominator){
+    public int Rational(int Numerator, int Denominator){
 
         int Gcd = gcd(numerator, denominator);
         
         if(denominator == 0)
             if (numerator <= 0){
-                this.numerator = -numerator/Gcd;
-                this.denominator = -denominator/Gcd;
+                this.Numerator = -numerator/Gcd;
+                this.Denominator = -denominator/Gcd;
             }
             else {
-                this.numerator = numerator/Gcd;
-                this.denominator = denominator/Gcd;
+                this.Numerator = numerator/Gcd;
+                this.Denominator = denominator/Gcd;
             }
     }
 
