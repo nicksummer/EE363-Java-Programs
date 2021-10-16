@@ -11,17 +11,15 @@ public class Rational{
         long GCDNum = gcd(this.num, that.num);
         long GCDDenom = gcd(this.denom, that.denom);
 
-        long newNum = (this.num / GCDNum) * (that.denom * GCDDenom) - (that.num / GCDNum) * (this.denom / GCDDenom);
-        long newDenom = this.denom * (that.denom / GCDDenom);
+        Rational subtraction = new Rational(((this.num / GCDNum) * (that.denom * GCDDenom)) - ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
+
+        return subtraction;
 
     }
 
     public Rational plus(Rational that){
         long GCDNum = gcd(this.num, that.num);
         long GCDDenom = gcd(this.denom, that.denom);
-
-        long newNum = (this.num / GCDNum) * (that.denom * GCDDenom) + (that.num / GCDNum) * (this.denom / GCDDenom);
-        long newDenom = this.denom * (that.denom / GCDDenom);
 
         Rational addition = new Rational(((this.num / GCDNum) * (that.denom * GCDDenom)) + ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
         
