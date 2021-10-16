@@ -34,7 +34,7 @@ public class Rational{
     }
 
     public static void main(String[] args){
-        Rational test = new Rational(5,1);
+        Rational test = new Rational(5,5);
         StdOut.println("\n" + test);
 		// Rational r1 = new Rational(5, 6);
 		// Rational r2 = new Rational(3, 4);
