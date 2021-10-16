@@ -1,18 +1,18 @@
 public class Rational{
     
-    private final long num;
-    private final long denom;
+    private long num;
+    private long denom;
 
    
-    public int Rational(long numerator, long denominator){
+    public Rational(long numerator, long denominator){
 
         long Gcd = gcd(numerator, denominator);
         // if (denominator == 0){
         //     throw new ArethmeticExcetption("denominator is zero");
         // }
             if (numerator < 0){
-                numerator = -numerator;
-                denominator = -denominator;
+                num = -num;
+                denom = -denom;
             }
             else {
                 num = numerator = numerator/Gcd;
