@@ -15,8 +15,8 @@ public class Rational{
                 denom = -denom;
             }
             else {
-                this.num = numerator = numerator/Gcd;
-                this.denom = denominator/Gcd;
+                this.num = numerator = numerator;///Gcd;
+                this.denom = denominator;///Gcd;
             }
     }
 
