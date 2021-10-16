@@ -18,7 +18,8 @@ public class Rational{
         int newNum = (this.num * that.denom);
         int newDenom = (this.denom * that.num);
         int GCD = gcd(newNum, newDenom);
-        long bigGCD = gcd(bigNum, bigDenom);
+
+        long bigGCD = gcd((long) this.num * (long) that.denom, (long) this.denom * (long) that.num);
         long bigNum = (long) this.num * (long) that.denom / bigGCD;
         long bigDenom = (long) this.denom * (long) that.num / bigGCD;
         
