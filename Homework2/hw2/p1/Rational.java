@@ -11,15 +11,15 @@ public class Rationals{
         if(denominator == 0)
             throw new IllegalArguementException("The denominator cannot be zero");
 
-            int gcd = gcd(numerator, denominator);
+            int Gcd = gcd(numerator, denominator);
 
             if (numerator <= 0){
-                this.numerator = -numerator/gcd;
-                this.denominator = -denominator/gcd;
+                this.numerator = -numerator/Gcd;
+                this.denominator = -denominator/Gcd;
             }
             else {
-                this.numerator = numerator;
-                this.denominator = denominator;
+                this.numerator = numerator/Gcd;
+                this.denominator = denominator/Gcd;
             }
     }
 
