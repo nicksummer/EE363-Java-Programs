@@ -15,15 +15,11 @@ public class Rational{
     }
 
     public Rational dividedBy(Rational that){
-        int newNum = (this.num * that.denom);
-        int newDenom = (this.denom * that.num);
-        int GCD = gcd(newNum, newDenom);
-
+        
         long bigGCD = gcd((long) this.num * (long) that.denom, (long) this.denom * (long) that.num);
         long bigNum = (long) this.num * (long) that.denom / bigGCD;
         long bigDenom = (long) this.denom * (long) that.num / bigGCD;
         
-
         StdOut.println(bigNum + " " + bigDenom);
         StdOut.println(GCD);
 
@@ -31,7 +27,7 @@ public class Rational{
             throw new AssertionError("overflow detected");
         }
 
-        return new Rational(newNum / GCD, newDenom /GCD); 
+        return new Rational((int)(newNum / GCD), (int)(newDenom /GCD)); 
     }
 
     public Rational times(Rational that){
