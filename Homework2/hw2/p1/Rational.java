@@ -138,15 +138,15 @@ public class Rational{
 		StdOut.println("res_r2plusn5: " + r2plusn5);
 		
 		//use VM flag '-ea' to cause overflow exception
-		//StdOut.println("\nOverflow test:");
-		//StdOut.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE);
-		//Rational r3 = new Rational(Integer.MAX_VALUE, 3);
-		//Rational r4 = new Rational(10,1);
-		//StdOut.println("r3: " + r3);
-		//StdOut.println("r4: " + r4);
-		//StdOut.println("Will attempt r3*r4 ...");
-		//Rational ofl = r3.times(r4);
-		//StdOut.println("r3*r4 = " + ofl);
+		StdOut.println("\nOverflow test:");
+		StdOut.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE);
+		Rational r3 = new Rational(Integer.MAX_VALUE, 3);
+		Rational r4 = new Rational(10,1);
+		StdOut.println("r3: " + r3);
+		StdOut.println("r4: " + r4);
+		StdOut.println("Will attempt r3*r4 ...");
+		Rational ofl = r3.times(r4);
+		StdOut.println("r3*r4 = " + ofl);
     }
 
 }
