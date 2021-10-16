@@ -39,15 +39,20 @@ public class Rational{
         return new Rational((int)bigNum, (int)bigDenom); 
     }
 
-    // public Rational minus(Rational that){
-    //     int GCDNum = gcd(this.num, that.num);
-    //     int GCDDenom = gcd(this.denom, that.denom);
-
-    //     Rational addition = new Rational(((this.num / GCDNum) * (that.denom / GCDDenom)) - ((that.num / GCDNum) * (this.denom / GCDDenom)), this.denom * (that.denom / GCDDenom));
+    public Rational minus(Rational that){
+        long bigNumer = (long)this.num * (long)that.denom - (long)that.num  *(long)this.denom;
+        long bigDenom = (long)this.denom * (long)that.denom;
+        long GCD = gcd( bigNumer,bigDenom);
+        bigNumer/= GCD;
+        bigDenom/= GCD;
         
+        if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
+            throw new AssertionError("overflow detected");
+        }
 
-    //     return addition;
-    // }
+        return new Rational((int)bigNumer, (int)bigDenom);
+    
+    }
 
     public Rational plus(Rational that){
         long bigNumer = (long)this.num * (long)that.denom + (long)that.num  *(long)this.denom;
@@ -55,7 +60,6 @@ public class Rational{
         long GCD = gcd( bigNumer,bigDenom);
         bigNumer/= GCD;
         bigDenom/=GCD;
-        StdOut.println(bigNumer + " " + bigDenom);
         
         if (bigNumer > Integer.MAX_VALUE || bigNumer < Integer.MIN_VALUE || bigDenom > Integer.MAX_VALUE){
             throw new AssertionError("overflow detected");
@@ -102,8 +106,8 @@ public class Rational{
 		Rational rsum = r1.plus(r2);
 		StdOut.println("r1 + r2: " + rsum);
 		
-		// Rational rdiff = r1.minus(r2);
-		// StdOut.println("r1 - r2: " + rdiff);
+		Rational rdiff = r1.minus(r2);
+		StdOut.println("r1 - r2: " + rdiff);
 		
 		Rational rprod = r1.times(r2);
 		StdOut.println("r1 * r2: " + rprod);
@@ -150,7 +154,7 @@ public class Rational{
 		StdOut.println("r3: " + r3);
 		StdOut.println("r4: " + r4);
 		StdOut.println("Will attempt r3+r4 ...");
-		Rational ofl = r3.plus(r4);
+		Rational ofl = r3.minus(r4);
 		StdOut.println("r3+r4 = " + ofl);
     }
 
