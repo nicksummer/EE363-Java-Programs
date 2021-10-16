@@ -31,7 +31,7 @@ public class Rational{
         }
         int GCD = gcd((int)newNum, (int)newDenom);
 
-        return new Rational(newNum / GCD, newDenom /GCD); 
+        return new Rational((int)newNum / GCD, (int)newDenom /GCD); 
     }
 
     public Rational minus(Rational that){
