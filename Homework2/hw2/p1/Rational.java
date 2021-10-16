@@ -66,7 +66,7 @@ public class Rational{
         return new Rational(-num, denom);
     }
     public Rational(int numerator, int denominator){
-        if(denom == 0){
+        if(denominator == 0){
             throw new RuntimeException("divide by zero error");
         }
 
