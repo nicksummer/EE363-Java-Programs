@@ -1,5 +1,4 @@
-package hw2.p1;
-import Rational; 
+import hw2.p1.Rational;
 import edu.princeton.cs.algs4.StdOut;
 
 class ClientRational {
