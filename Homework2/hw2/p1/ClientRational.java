@@ -1,3 +1,4 @@
+package hw2.p1;
 import hw2.p1.Rational;
 import edu.princeton.cs.algs4.StdOut;
 
