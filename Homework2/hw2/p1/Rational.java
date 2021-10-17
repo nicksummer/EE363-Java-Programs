@@ -1,3 +1,5 @@
+package hw2.p1;
+
 public class Rational{
     private final int num;
     private final int denom;
