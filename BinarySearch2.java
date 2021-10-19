@@ -44,7 +44,7 @@ import edu.princeton.cs.algs4.StdOut;
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  */
-public class BinarySearch {
+public class BinarySearch2 {
 
     /**
      * This class should not be instantiated.
