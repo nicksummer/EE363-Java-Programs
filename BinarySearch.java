@@ -64,7 +64,7 @@ public class BinarySearch{
         while (lo <= hi) {
             // Key is in a[lo..hi] or not present.
             int mid = lo + (hi - lo) / 2;
-            StdOut.println("  "+"["+String.valueOf(lo)+ ", " + String.valueOf(hi) + "]");
+            StdOut.println(+"["+String.valueOf(lo)+ ", " + String.valueOf(hi) + "]");
             if      (key < a[mid]) hi = mid - 1;
             else if (key > a[mid]) lo = mid + 1;
             else return mid;
