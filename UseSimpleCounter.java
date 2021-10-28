@@ -31,5 +31,6 @@ public class UseSimpleCounter {
 	    ie.printStackTrace();
 	}
 	System.out.printf("count=%d\n", mtc.getCount());
+    System.out.println(mtc.getCount());
     }
 }
