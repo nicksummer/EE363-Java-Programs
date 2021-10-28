@@ -23,9 +23,9 @@ public class UseSimpleCounter {
 
 	try {
 	    t1.join();
-	    System.out.println("In main: t1 finished... waiting for t2 to finish.");
+	   // System.out.println("In main: t1 finished... waiting for t2 to finish.");
 	    t2.join();
-	    System.out.println("In main: t2 is finished");
+	    //System.out.println("In main: t2 is finished");
 	} catch (InterruptedException ie) {
 	    System.out.println(ie);
 	    ie.printStackTrace();
