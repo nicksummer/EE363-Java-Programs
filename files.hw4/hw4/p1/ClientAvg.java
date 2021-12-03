@@ -15,7 +15,7 @@ public class ClientAvg {
 	
 	try {
 	    //user input
-	    MAX _LEFT = Integer.parseInt(args[0]); //max value of the left endpoint
+	    MAX_LEFT = Integer.parseInt(args[0]); //max value of the left endpoint
 	    MAX_RIGHT = Integer.parseInt(args[1]); //max value of right endpoint
 	    NUM_LISTS = Integer.parseInt(args[2]); //number of lists
 	} catch (NumberFormatException e) {
