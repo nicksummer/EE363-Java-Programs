@@ -1,6 +1,6 @@
-package hw4.p1;
+package hw4.p1.hw4.p1;
 
-import jasva.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ClientAvg {
     public static void main(String[] args) {
