@@ -1,4 +1,4 @@
-package hw4.p1.hw4.p1;
+package hw4.p1;
 
 import jdk.nashorn.api.scripting.ScriptUtils;
 
