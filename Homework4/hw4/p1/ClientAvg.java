@@ -1,4 +1,4 @@
-package hw4.p1;
+package hw4.p1.hw4.p1;
 
 import java.util.concurrent.ThreadLocalRandom;
 

@@ -1,4 +1,4 @@
-package hw4.p1;
+package hw4.p1.hw4.p1;
 
 import jdk.nashorn.api.scripting.ScriptUtils;
 
@@ -24,9 +24,9 @@ public class RCompute implements Runnable {
         
         }
         //thread.currentthread.getname()
-        double average = total / counter;
-        System.out.printf("average of square roots is: %.2f %n", average);
-        String textfilething = String.format("average of square roots is: %.2f %n", average);
+        double average = total / counter; // %.2f %n
+        System.out.printf("[Thread " + Thread.currentThread().getName() + "]" + " Average of square roots (" + left + " to " + right + ") = %.2f %n", average);
+        String textfilething = String.format("[Thread " + Thread.currentThread().getName() + "]" + " Average of square roots (" + left + " to " + right + ") = %.2f %n", average);
         try {
             FileWriter FW = new FileWriter("avg10.txt", true);
             FW.append(textfilething);
