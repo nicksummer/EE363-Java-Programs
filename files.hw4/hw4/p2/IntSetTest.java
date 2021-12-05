@@ -8,7 +8,18 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 public class IntSetTest {
 
+
+    //Test to see if the array is empty or not with checkRepInv
+    @Test
+    public void testofcheckRevInv () {
+        IntSet set = new IntSet();
+        set.insert(100);
+        set.insert(23);
+        assertNotNull(set.toString());
+    }
+
     //Test to see if the given value is inserted into the array properly
+    //tests the isIn property
     @Test
     public void testInsertIntoArray () {
         IntSet set = new IntSet();
@@ -18,6 +29,7 @@ public class IntSetTest {
 
     //Test to see a specific value is in the IntSet
     // asserts False if the value is not in the set
+    //tests the isIn property
     @Test
     public void testSpecificValIsNotInSet () {
         IntSet set = new IntSet();
@@ -34,6 +46,7 @@ public class IntSetTest {
     }
 
     //Test to see if the new intset is empty
+    // tests the IntSet constructor property to see if it can sucessfully create an empty array
     @Test
     public void testIfEmpty () {
         IntSet set = new IntSet();
